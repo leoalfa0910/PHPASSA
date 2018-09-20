@@ -15,7 +15,7 @@
 							<h5 class="card-title"><?php echo $producto['nombre'] ?></h5>
 							<p class="card-text"><?php echo $producto['descr_corta'] ?></p>
 							<h6>$<?php echo $producto['precio'] ?></h6>
-							<a href="#" class="btn btn-primary">Comprar</a>
+							<a href="#" class="btn">Comprar</a>
 						</div>
 					</div>
 				</div>
