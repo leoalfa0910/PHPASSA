@@ -8,8 +8,8 @@
 	 		<div class="row">
 	 		<?php
 	 		foreach($productos as $producto) { ?>
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="card my-4">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+					<div class="card my-2">
 						<img class="card-img-top" src="<?php echo $producto['img_chica'] ?>" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title"><?php echo $producto['nombre'] ?></h5>
