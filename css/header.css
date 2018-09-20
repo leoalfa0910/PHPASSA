@@ -1,0 +1,13 @@
+nav.navbar {
+    min-height: 100px;
+    box-shadow: 1px 0 1px #999;
+    padding: 0 10px;
+}
+
+nav.navbar .navbar-collapse {
+    flex-grow: 0;
+}
+
+nav.navbar a img {
+    width: 150px;
+}

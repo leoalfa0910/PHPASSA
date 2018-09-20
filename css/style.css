@@ -1,0 +1,12 @@
+/**
+ * @nombre: Proyecto Integrador Digital House
+ * @integrantes: Nahuel Contreras, Santiago Osadczuk, Nicolás Lalín, Marcos Di Paolo;
+ * @tipo: E-commerce de Insumos de Computación
+ * @versión: v.1.0.0
+ */
+
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
+@import '/css/generales.css';
+@import '/css/header.css';
+@import '/css/productos.css';
+@import '/css/footer.css';
