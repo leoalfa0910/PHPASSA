@@ -1,8 +1,4 @@
-@media(min-width: 576px) {
-    section#productos {
-        padding: 0;
-    }
-}
+@media(min-width: 576px) {}
 
 @media(min-width: 768px) {}
 
