@@ -1,4 +1,5 @@
-<?php 
+<?php
+  // este es el Array de productos
  $productos = [
  	[
  		'id_producto' => 1,
@@ -8,7 +9,7 @@
  		'img_full' => 'img/productos/headset.jpg',
  		'img_chica' => 'img/productos/thumb/headset.jpg',
  		'precio' => 1650
- 	], 
+ 	],
  	[
  		'id_producto' => 2,
  		'nombre' => 'HD SSD 240gb M2 WD Green',
@@ -17,7 +18,7 @@
  		'img_full' => 'img/productos/m2.jpg',
  		'img_chica' => 'img/productos/thumb/m2.jpg',
  		'precio' => 2480
- 	], 
+ 	],
  	[
  		'id_producto' => 3,
  		'nombre' => 'Teclado HyperX Alloy Kingston',
@@ -26,7 +27,7 @@
  		'img_full' => 'img/productos/teclado.jpg',
  		'img_chica' => 'img/productos/thumb/teclado.jpg',
  		'precio' => 4899
- 	], 
+ 	],
  	[
  		'id_producto' => 4,
  		'nombre' => 'Mother Gigabyte GA-H110M-H ***',
@@ -35,7 +36,7 @@
  		'img_full' => 'img/productos/mother.jpg',
  		'img_chica' => 'img/productos/thumb/mother.jpg',
  		'precio' => 2482
- 	], 
+ 	],
  	[
  		'id_producto' => 5,
  		'nombre' => 'Radeon RX 570 4GB Gigabyte Aorus',
@@ -44,7 +45,7 @@
  		'img_full' => 'img/productos/placavideo.jpg',
  		'img_chica' => 'img/productos/thumb/placavideo.jpg',
  		'precio' => 9799
- 	], 
+ 	],
  	[
  		'id_producto' => 6,
  		'nombre' => 'Silla gamer AeroCool ac120 Air RGB',
@@ -53,7 +54,7 @@
  		'img_full' => 'img/productos/silla.jpg',
  		'img_chica' => 'img/productos/thumb/silla.jpg',
  		'precio' => 12300
- 	], 
+ 	],
  	[
  		'id_producto' => 7,
  		'nombre' => 'ASUS Prime H110M-P Micro-ATX H110 ',
@@ -62,7 +63,7 @@
  		'img_full' => 'img/productos/mother2.jpg',
  		'img_chica' => 'img/productos/thumb/mother2.jpg',
  		'precio' => 2499
- 	], 
+ 	],
  	[
  		'id_producto' => 8,
  		'nombre' => 'Auriculares Logitech G533 Gaming',
@@ -71,7 +72,7 @@
  		'img_full' => 'img/productos/auriculares.jpg',
  		'img_chica' => 'img/productos/thumb/auriculares.jpg',
  		'precio' => 4899
- 	], 
+ 	],
  	[
  		'id_producto' => 9,
  		'nombre' => 'Gabinete NZXT Noctis 450',
@@ -80,7 +81,7 @@
  		'img_full' => 'img/productos/gabinete.jpg',
  		'img_chica' => 'img/productos/thumb/gabinete.jpg',
  		'precio' => 8590
- 	], 
+ 	],
  	[
  		'id_producto' => 10,
  		'nombre' => 'Fuente 430W EVGA 100WA-0430-KR',
@@ -89,7 +90,7 @@
  		'img_full' => 'img/productos/fuente.jpg',
  		'img_chica' => 'img/productos/thumb/fuente.jpg',
  		'precio' => 2199
- 	], 
+ 	],
  	[
  		'id_producto' => 11,
  		'nombre' => 'HD SSD 120GB Sandisk PLUS',
@@ -98,7 +99,7 @@
  		'img_full' => 'img/productos/ssd.jpg',
  		'img_chica' => 'img/productos/thumb/ssd.jpg',
  		'precio' => 1650
- 	], 
+ 	],
  	[
  		'id_producto' => 12,
  		'nombre' => 'Mouse Logitech G300 Gaming',
