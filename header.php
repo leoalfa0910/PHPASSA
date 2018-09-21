@@ -30,7 +30,7 @@
 		        <a class="nav-link" href="productos.php">Login</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="productos.php">Regstrarse</a>
+		        <a class="nav-link" href="productos.php">Registrarse</a>
 		      </li>
 		    </ul>
 		  </div>

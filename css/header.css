@@ -3,7 +3,7 @@ nav.navbar {
     position: fixed;
     width: 100%;
     min-height: 100px;
-    box-shadow: 1px 0 5px #999;
+    box-shadow: 0 0 10px #bbb;
     padding: 0 10px;
     z-index: 10;
 }

@@ -4,6 +4,14 @@ section#productos .card {
     max-width: 300px;
     margin: 0 auto;
     border-radius: 0;
+    /*border-color: #eee;*/
+    border: none;
+    box-shadow: 2px 1px 5px #bbb;
+    transition: 150ms;
+}
+
+section#productos .card:hover {
+    transform: translateY(-5px);
 }
 
 section#productos .card .card-body {
@@ -28,6 +36,8 @@ section#productos .card a.btn {
     left: 20px;
     background-color: rgba(251, 145, 1, 1.00);
     color: white;
+    border-radius: 0;
+    font-weight: 700;
 }
 
 section#productos p {
