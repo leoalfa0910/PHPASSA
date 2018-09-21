@@ -39,5 +39,4 @@
 	    <!-- fin . nav -->
 	</header>
 	<!-- fin . cabeza -->
-</body>
-</html>
+	<div class="placeholder"></div>

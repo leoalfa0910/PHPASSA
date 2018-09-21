@@ -1,9 +1,15 @@
 section#productos .card {
     position: relative;
-    min-height: 450px;
+    min-height: 400px;
     max-width: 300px;
     margin: 0 auto;
+    border-radius: 0;
 }
+
+section#productos .card .card-body {
+    padding-top: 5px;
+}
+
 
 section#productos .card img {
     display: block;

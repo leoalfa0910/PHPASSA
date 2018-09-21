@@ -5,6 +5,7 @@
  <!-- . productos -->
  <section id="productos">
     <div class="container">
+    	<h2 class="my-5">Productos</h2>
 	 		<div class="row">
 	 		<?php
 	 		foreach($productos as $producto) { ?>
