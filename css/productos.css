@@ -4,9 +4,8 @@ section#productos .card {
     max-width: 300px;
     margin: 0 auto;
     border-radius: 0;
-    /*border-color: #eee;*/
     border: none;
-    box-shadow: 2px 1px 5px #bbb;
+    box-shadow: 2px 1px 4px #bbb;
     transition: 150ms;
 }
 
@@ -25,8 +24,8 @@ section#productos .card img {
     max-width: 200px;
 }
 
-section#productos .card h5.card-title {
-    color: rgba(51, 87, 122, 1.00);
+section#productos .card h4.card-title {
+    color: #33577A;
 }
 
 section#productos .card a.btn {

@@ -6,6 +6,7 @@
  */
 
 @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=BenchNine:300,400');
 @import '/css/generales.css';
 @import '/css/header.css';
 @import '/css/productos.css';

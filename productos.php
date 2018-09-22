@@ -13,9 +13,9 @@
 					<div class="card my-3">
 						<img class="card-img-top" src="<?php echo $producto['img_chica'] ?>" alt="Card image cap">
 						<div class="card-body">
-							<h5 class="card-title"><?php echo $producto['nombre'] ?></h5>
+							<h4 class="card-title"><?php echo $producto['nombre'] ?></h4>
 							<p class="card-text"><?php echo $producto['descr_corta'] ?></p>
-							<h6>$<?php echo $producto['precio'] ?>.-</h6>
+							<h5>$<?php echo $producto['precio'] ?>.-</h5>
 							<a href="#" class="btn">Comprar</a>
 						</div>
 					</div>
