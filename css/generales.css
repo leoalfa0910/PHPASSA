@@ -10,9 +10,14 @@ img {
     max-width: 100%;
     height: auto;
 }
+h2 {
+	font-size: 40px;
+}
 
-h2 h2,
-h4,
-h5 {
-    font-family: BenchNine;
+a {
+	color: #33577A;
+}
+a:hover {
+	text-decoration: none;
+	color:rgb(251, 145, 1);
 }

@@ -24,16 +24,13 @@ section#productos .card img {
     max-width: 200px;
 }
 
-section#productos .card h4.card-title {
-    color: #33577A;
-}
 
 section#productos .card a.btn {
     font-size: 12px;
     position: absolute;
     bottom: 10px;
     left: 20px;
-    background-color: rgba(251, 145, 1, 1.00);
+    background-color: rgb(251, 145, 1);
     color: white;
     border-radius: 0;
     font-weight: 700;
