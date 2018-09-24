@@ -8,6 +8,9 @@ foreach($productos as $producto) {
 }
 ?>
 <section id="single">
+	<br>
+	<br>
+	<br>
 	<div class="container">
 		<div class="row">
 			<div class="col12 col-lg-5">

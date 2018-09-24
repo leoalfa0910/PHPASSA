@@ -23,6 +23,7 @@ section#productos .card img {
     margin: 0 auto;
     max-width: 200px;
 }
+
 section#productos .card a .card-title {
     font-size: 20px;
 }
