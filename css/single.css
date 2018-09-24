@@ -2,10 +2,14 @@ section#single {
     min-height: calc(100vh - 275px);
 }
 
+section#single .single-col {
+    padding: 0 40px;
+}
+
 section#single h2 {}
 
 section#single p {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 section#single img {
