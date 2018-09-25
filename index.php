@@ -1,4 +1,4 @@
-<?php 
+<?php
 include('header.php');
  ?>
  <!-- . index -->
@@ -7,11 +7,11 @@ include('header.php');
  	<br>
  	<br>
       <div class="container">
-	 	<h1>Aca va el landing page</h1>
-	 </div>
+	 	       <h1>Aca va el landing page</h1>
+	   </div>
  </section>
  <!-- fin . index -->
 
- <?php 
+ <?php
 include('footer.php');
  ?>
