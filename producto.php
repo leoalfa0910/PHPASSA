@@ -8,17 +8,19 @@ foreach($productos as $producto) {
 }
 ?>
 <section id="single">
+	<br>
+	<br>
+	<br>
 	<div class="container">
 		<div class="row">
-			<div class="col12 col-lg-5">
+			<div class="single-col col-12 col-lg-5">
 				<img src="<?php echo $single['img_full'] ?>" alt="">
 			</div>
-			<div class="col12 col-lg-7">
-				<br><br>
+			<div class="single-col col12 col-lg-7">
+				<br>
 				<h3><?php echo $single['nombre'] ?></h3>
 				<h4>$<?php echo $single['precio'] ?>.-</h4>
 				<small>Cod. de artículo: <?php echo $single['id_producto'] ?></small>
-				<br>
 				<br>
 				<br>
 				<h6>Descripción</h6>
