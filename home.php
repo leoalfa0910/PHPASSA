@@ -4,10 +4,6 @@
 
     <div class="row">
 
-      <div class="col-10 offset-1">
-        <img class="" src="img/logo.png" alt="">
-      </div>
-
       <div class="col-8 offset-2">
         <h1 class="">PROYECTO X</h1>
       </div>

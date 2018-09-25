@@ -39,5 +39,3 @@
 	    <!-- fin . nav -->
 	</header>
 	<!-- fin . cabeza -->
-</body>
-</html>

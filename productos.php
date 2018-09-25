@@ -1,11 +1,11 @@
 <?php
 	include 'header.php';
-	include 'arr_productos.php'
  ?>
+<div class="placeholder"></div>
  <!-- . productos -->
  <section id="productos">
     <div class="container">
-    	<h2 class="my-5">Productos</h2>
+    	<h2 class="">Productos</h2>
 	 		<div class="row">
 	 		<?php
 	 		foreach($productos as $producto) { ?>
