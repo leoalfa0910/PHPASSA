@@ -23,7 +23,7 @@ if ($_POST){
 	}
 }
 ?>
-<div class="placeholder"></div>
+
 <div class="container">
 	<div class= "row justify-content-center">
 		<div class= "contenedorUno col-12 col-sm-12 col-md-4 col-lg-4 ">

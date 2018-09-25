@@ -1,7 +1,6 @@
 <?php
 	include 'header.php';
  ?>
-<div class="placeholder"></div>
  <!-- . productos -->
  <section id="productos">
     <div class="container">
