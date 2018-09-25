@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include 'header.php';
 	include 'arr_productos.php'
  ?>
@@ -21,12 +21,12 @@
 					</div>
 				</div>
 
-	 		<?php } ?> 
+	 		<?php } ?>
 	 		</div>
-	 </div> 
+	 </div>
  </section>
  <!-- fin . productos -->
- 
- <?php 
+
+ <?php
 	include 'footer.php';
 ?>
