@@ -17,7 +17,7 @@
       </div>
 
       <div class="col-8 offset-2">
-        <h2 class="">Compra online de productos de PC</h2>
+        <h2 class="">Compra online de insumos de PC</h2>
       </div>
 
     </div>
