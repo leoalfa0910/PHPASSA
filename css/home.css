@@ -1,14 +1,17 @@
 section#home {
-  background-color: rgb(169, 184, 188);
+  background-color: #979DA2;
 }
+
 section#home img{
   width: 200px;
 }
+
 section#home h1{
   color: rgb(51, 87, 122);
   font-size: 35px;
   font-family: 'Montserrat';
 }
+
 section#home h5{
   color: rgb(51, 87, 122);
   font-size: 15px;

@@ -1,6 +1,6 @@
 <section id="home">
   <div class="container">
-    <div class="row">
+    <div class="row text-center">
       <div class="col-12">
         <img src="img/logo.png" alt="">
       </div>
