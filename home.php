@@ -1,7 +1,7 @@
 <section id="home">
   <div class="container">
     <div class="row">
-      <div class="col-8 offset-2">
+      <div class="col-12">
         <img src="img/logo.png" alt="">
       </div>
       <div class="col-12">
