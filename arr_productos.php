@@ -8,7 +8,8 @@
  		'descr_corta' => 'Asegura el mejor sonido para las mejores partidas.',
  		'img_full' => 'img/productos/headset.jpg',
  		'img_chica' => 'img/productos/thumb/headset.jpg',
- 		'precio' => 1650
+ 		'precio' => 1650,
+ 		'destacado' => true
  	],
  	[
  		'id_producto' => 2,
@@ -17,7 +18,8 @@
  		'descr_corta' => 'Los SSD WD Green mejoran la experiencia informática. ',
  		'img_full' => 'img/productos/m2.jpg',
  		'img_chica' => 'img/productos/thumb/m2.jpg',
- 		'precio' => 2480
+ 		'precio' => 2480,
+ 		'destacado' => true
  	],
  	[
  		'id_producto' => 3,
@@ -26,7 +28,8 @@
  		'descr_corta' => 'HyperX Alloy FPS RGB™. High-performance.',
  		'img_full' => 'img/productos/teclado.jpg',
  		'img_chica' => 'img/productos/thumb/teclado.jpg',
- 		'precio' => 4899
+ 		'precio' => 4899,
+ 		'destacado' => true
  	],
  	[
  		'id_producto' => 4,
@@ -35,7 +38,8 @@
  		'descr_corta' => 'Compatibles con los procesadores Intel® Core.',
  		'img_full' => 'img/productos/mother.jpg',
  		'img_chica' => 'img/productos/thumb/mother.jpg',
- 		'precio' => 2482
+ 		'precio' => 2482,
+ 		'destacado' => false
  	],
  	[
  		'id_producto' => 5,
@@ -44,7 +48,8 @@
  		'descr_corta' => 'En la búsqueda de la mejor experiencia.',
  		'img_full' => 'img/productos/placavideo.jpg',
  		'img_chica' => 'img/productos/thumb/placavideo.jpg',
- 		'precio' => 9799
+ 		'precio' => 9799,
+ 		'destacado' => false
  	],
  	[
  		'id_producto' => 6,
@@ -53,7 +58,8 @@
  		'descr_corta' => 'Cuatro efectos de iluminación con RGB.',
  		'img_full' => 'img/productos/silla.jpg',
  		'img_chica' => 'img/productos/thumb/silla.jpg',
- 		'precio' => 12300
+ 		'precio' => 12300,
+ 		'destacado' => false
  	],
  	[
  		'id_producto' => 7,
@@ -62,7 +68,8 @@
  		'descr_corta' => 'Diseñado para la 7magen de Intel® Core.',
  		'img_full' => 'img/productos/mother2.jpg',
  		'img_chica' => 'img/productos/thumb/mother2.jpg',
- 		'precio' => 2499
+ 		'precio' => 2499,
+ 		'destacado' => false
  	],
  	[
  		'id_producto' => 8,
@@ -71,7 +78,8 @@
  		'descr_corta' => 'Micrófono y sonido envolvente DTS 7.1',
  		'img_full' => 'img/productos/auriculares.jpg',
  		'img_chica' => 'img/productos/thumb/auriculares.jpg',
- 		'precio' => 4899
+ 		'precio' => 4899,
+ 		'destacado' => false
  	],
  	[
  		'id_producto' => 9,
@@ -80,7 +88,8 @@
  		'descr_corta' => 'El regreso de NZXT a diseños audaces y atrevidos.',
  		'img_full' => 'img/productos/gabinete.jpg',
  		'img_chica' => 'img/productos/thumb/gabinete.jpg',
- 		'precio' => 8590
+ 		'precio' => 8590,
+ 		'destacado' => false
  	],
  	[
  		'id_producto' => 10,
@@ -89,7 +98,8 @@
  		'descr_corta' => 'Una gran elección a un bajo costo.',
  		'img_full' => 'img/productos/fuente.jpg',
  		'img_chica' => 'img/productos/thumb/fuente.jpg',
- 		'precio' => 2199
+ 		'precio' => 2199,
+ 		'destacado' => false
  	],
  	[
  		'id_producto' => 11,
@@ -98,7 +108,8 @@
  		'descr_corta' => 'Pionera en tecnologías de almacenamiento. ',
  		'img_full' => 'img/productos/ssd.jpg',
  		'img_chica' => 'img/productos/thumb/ssd.jpg',
- 		'precio' => 1650
+ 		'precio' => 1650,
+ 		'destacado' => false
  	],
  	[
  		'id_producto' => 12,
@@ -108,5 +119,6 @@
  		'img_full' => 'img/productos/mouse.jpg',
  		'img_chica' => 'img/productos/thumb/mouse.jpg',
  		'precio' => 895,
+ 		'destacado' => false
  	]
  ];
