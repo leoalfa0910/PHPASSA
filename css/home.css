@@ -17,3 +17,53 @@ section#home h5{
   font-size: 15px;
   font-family: 'Montserrat';
 }
+
+section#destacados h2{
+  color: rgb(51, 87, 122);
+}
+
+section#destacados .card {
+    position: relative;
+    min-height: 400px;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 0;
+    border: none;
+    box-shadow: 2px 1px 4px #bbb;
+    transition: 150ms;
+}
+
+section#destacados .card:hover {
+    transform: translateY(-5px);
+}
+
+section#destacados .card .card-body {
+    padding-top: 5px;
+}
+
+
+section#destacados .card img {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+section#destacados .card a .card-title {
+    font-size: 20px;
+}
+
+
+section#destacados .card a.btn {
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    background-color: rgb(251, 145, 1);
+    color: white;
+    border-radius: 0;
+    font-weight: 700;
+}
+
+section#destacados p {
+    font-size: 12px;
+}

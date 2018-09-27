@@ -1,12 +1,12 @@
 @media(min-width: 576px) {
   section#home img{
-    width: 250px;
+    width: 225px;
   }
 }
 
 @media(min-width: 768px) {
   section#home img{
-    width: 300px;
+    width: 250px;
 }
 
 @media(min-width: 992px) {
