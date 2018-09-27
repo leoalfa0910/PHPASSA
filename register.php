@@ -73,7 +73,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
     <div class="container">
 
 
-        <form class="" action="formulario.php" method="post" enctype="multipart/form-data">
+        <form class="" method="post" enctype="multipart/form-data">
 
           <h2>Formulario de Registro:</h2>
 
@@ -135,7 +135,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           <div class="row">
             <div class="col-12">
               <label for="imagenDePerfil">Imagen de Perfil:</label><br>
-              <input class="" type="file" name="imagenDePerfil" value="" required>
+              <input class="" type="file" name="imagenDePerfil" value="">
               <?php echo $errorImagenDePerfil ?>
             </div>
           </div>
