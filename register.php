@@ -181,4 +181,7 @@ if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK);
 
         </form>
       </section>
+
+      <br>
+      
 <?php include('footer.php') ?>
