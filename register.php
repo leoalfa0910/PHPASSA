@@ -135,7 +135,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           <div class="row">
             <div class="col-12">
               <label for="imagenDePerfil">Imagen de Perfil:</label><br>
-              <input class="" type="file" name="imagenDePerfil" value="" required>
+              <input class="" type="file" name="imagenDePerfil" value="">
               <?php echo $errorImagenDePerfil ?>
             </div>
           </div>
