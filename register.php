@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 /* aquí irá el header */
 include('header.php');
@@ -53,42 +53,36 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
       $errorPassDeNuevo = 'La contraseña no coincide';
     }
 
+    if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK) {
+      $origen = $_FILES['imagenDePerfil']['tmp_name'];
+      $ext = pathinfo($_FILES['imagenDePerfil']['name'], PATHINFO_EXTENSION);
+      $nombreDeImagen = $_POST['nombreDeUsuario'] . '.' . $ext;
+      $destino = 'img/' . $nombreDeImagen;
+
+      move_uploaded_file($origen, $destino);
+    }
+
 }
 
-if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK);
-    $origen = $_FILES['imagenDePerfil']['tmp_name'];
-    $ext = pathinfo($_FILES['imagenDePerfil']['name'], PATHINFO_EXTENSION);
-    $nombreDeImagen = $_POST['nombreDeUsuario'] . '.' . $ext;
-    $destino = 'img/' . $nombreDeImagen;
 
-    move_uploaded_file($origen, $destino);
 
  ?>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="estiloFormulario.css">
-    <title>Formulario</title>
-  </head>
-  <body>
 
+  <section id="register">
     <div class="container">
 
-      <section>
 
         <form class="" action="formulario.php" method="post" enctype="multipart/form-data">
 
-          <h1>Formulario de Registro:</h1>
+          <h2>Formulario de Registro:</h2>
 
           <br>
 
           <div class="row">
-            <div class="col-12 nombre">
+            <div class="col-12 nombre form-group">
               <label for="nombreCompleto">Nombre y Apellido:</label>
-              <input id="nombreCompleto"  type="text" name="nombreCompleto" value="" placeholder="--> Ingrese su nombre">
+              <input class="form-control" id="nombreCompleto"  type="text" name="nombreCompleto" value="" placeholder="--> Ingrese su nombre">
               <?php echo $errorNombreCompleto ?>
             </div>
           </div>
@@ -96,21 +90,21 @@ if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK);
           <br>
 
           <div class="row">
-            <div class="col-12">
-              <label class="sex" for="">Sexo:</label>
-              <input class="sex" type="radio" name="Sexo" value="M">Masculino
-              <input class="sex" type="radio" name="Sexo" value="F">Femenino
+            <div class="col-12 form-group sexo">
+              <label class="" for="">Sexo:</label>
+              <input class="form-check-input" type="radio" name="Sexo" value="M"><label class="form-check-label">Masculino</label>
+              <input class="form-check-input" type="radio" name="Sexo" value="F"><label class="form-check-label">Femenino</label>
             </div>
           </div>
 
           <br>
 
           <div class="row">
-            <div class="col-12">
-              <select class="" name="pais" required>
+            <div class="col-12 form-group">
+              <select class="form-control" name="pais" required>
                 <option selected="true" disabled="disabled">Seleccione su país de nacimiento:</option>
                 <?php foreach ($paises as $pais) { ?>
-                <option value=""><?php echo $pais['nombre']; ?></option>
+                <option value=""><?php echo $pais; ?></option>
                 <?php } ?>
               </select>
             </div>
@@ -119,12 +113,9 @@ if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK);
           <br>
 
           <div class="row correo">
-            <div class="col-1">
-              <img src="correo2.png" alt="">
-            </div>
-            <div class="col-11"
+            <div class="col-12 form-group">
               <label for="correoElectronico">Correo Electrónico:</label>
-              <input id="correoElectronico" type="text" name="correoElectronico" value="">
+              <input class="form-control" id="correoElectronico" type="text" name="correoElectronico" value="">
               <?php echo $errorCorreo ?>
             </div>
           </div>
@@ -132,9 +123,9 @@ if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK);
           <br>
 
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 form-group">
               <label for="nombreDeUsuario">Nombre de Usuario:</label>
-              <input id="nombreDeUsuario" type="text" name="nombreDeUsuario" value="" placeholder="">
+              <input class="form-control" id="nombreDeUsuario" type="text" name="nombreDeUsuario" value="<?php echo $_POST['nombreDeUsuario'] ?? '' ?>" placeholder="">
               <?php echo $errorUsuario ?>
             </div>
           </div>
@@ -143,8 +134,8 @@ if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK);
 
           <div class="row">
             <div class="col-12">
-              <label for="imagenDePerfil">Imagen de Perfil:</label>
-              <input type="file" name="imagenDePerfil" value="" required>
+              <label for="imagenDePerfil">Imagen de Perfil:</label><br>
+              <input class="" type="file" name="imagenDePerfil" value="" required>
               <?php echo $errorImagenDePerfil ?>
             </div>
           </div>
@@ -152,9 +143,9 @@ if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK);
           <br>
 
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 form-group">
               <label for="pass">Contraseña:</label>
-              <input id="pass" type="password" name="pass" value="">
+              <input class="form-control" id="pass" type="password" name="pass" value="">
               <?php echo $errorPass ?>
             </div>
           </div>
@@ -162,9 +153,9 @@ if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK);
           <br>
 
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 form-group">
               <label for="passDeNuevo">Repita su contraseña:</label>
-              <input id="passDeNuevo" type="password" name="passDeNuevo" value="" placeholder="">
+              <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="" placeholder="">
               <?php echo $errorPassDeNuevo ?>
             </div>
           </div>
@@ -173,13 +164,14 @@ if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK);
 
           <div class="row">
             <div class="col-12">
-              <button type="submit" name="button">¡Registrame!</button>
+              <button class="btn btn-primary" type="submit" name="button">¡Registrame!</button>
               <br><br>
-              <button type="reset" name="button">Cancelar</button>
+              <button class="btn btn-primary" type="reset" name="button">Cancelar</button>
             </div>
           </div>
 
         </form>
+      </div>
       </section>
 
       <br>
