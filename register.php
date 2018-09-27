@@ -73,7 +73,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
     <div class="container">
 
 
-        <form class="" action="formulario.php" method="post" enctype="multipart/form-data">
+        <form class="" method="post" enctype="multipart/form-data">
 
           <h2>Formulario de Registro:</h2>
 
@@ -175,5 +175,5 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
       </section>
 
       <br>
-      
+
 <?php include('footer.php') ?>
