@@ -67,3 +67,7 @@ section#destacados .card a.btn {
 section#destacados p {
     font-size: 12px;
 }
+
+section#destacados div.row {
+  justify-content: center;
+}
