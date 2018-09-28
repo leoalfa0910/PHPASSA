@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200" rel="stylesheet">
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<meta charset="UTF-8">
-	<title>PROYECTO X</title>
+	<title>PROYECTO X - Insumos</title>
 </head>
 <body>
 	<!-- . cabeza -->
