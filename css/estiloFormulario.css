@@ -1,3 +1,19 @@
 section#register .sexo label {
 	margin-right: 30px;
 }
+
+section#register .error {
+	color: red;
+	font-weight: bold;
+}
+
+section#register label {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+section#register .botones {
+	display: flex;
+	justify-content: flex-end;
+
+}

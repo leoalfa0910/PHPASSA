@@ -13,7 +13,7 @@ $errorPass = '';
 $errorPassDeNuevo = '';
 
 if( $_POST ){
-  var_dump($_POST);
+  // var_dump($_POST);
 
 $_POST['nombreCompleto']=trim( $_POST['nombreCompleto'] );
 $_POST['correoElectronico']=trim( $_POST['correoElectronico'] );
@@ -24,7 +24,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
   }
 
   if( empty( $_POST['nombreCompleto'] ) ){
-      $errorNombreCompleto = '<img src="aqui.png" width=30px> Ingrese su nombre aquí';
+      $errorNombreCompleto = 'Ingrese su nombre aquí';
     } else if ( strlen( $_POST['nombreCompleto'] ) < 4 ){
       $errorNombreCompleto = 'El nombre es demasiado corto';
     }
@@ -37,18 +37,16 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
 
     if( empty($_POST['nombreDeUsuario']) ){
         $errorUsuario = 'Debe ingresar nombre de usuario';
-    } elseif ($_POST['nombreDeUsuario'] < 5 )  {
+    } elseif (strlen($_POST['nombreDeUsuario']) < 5 )  {
         $errorUsuario = 'El nombre debe poseer al menos 5 caracteres';
-
     }
 
     if( empty($_POST['pass']) ){
         $errorPass = 'Debe ingresar una contraseña';
     }
 
-    if ($_POST['pass'] < 8 ) {
+    if (strlen($_POST['pass']) > 0 && strlen($_POST['pass']) < 8 ) {
         $errorPass= 'La contraseña ingresada es demasiado corta';
-
     }
 
     if($_POST['pass'] !== $_POST['passDeNuevo']){
@@ -56,17 +54,17 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
     }
 
     if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK) {
-      $origen = $_FILES['imagenDePerfil']['tmp_name'];
       $ext = pathinfo($_FILES['imagenDePerfil']['name'], PATHINFO_EXTENSION);
+      if( $ext == 'jpg' ||  $ext == 'jpeg' || $ext == 'png' ){
       $nombreDeImagen = $_POST['nombreDeUsuario'] . '.' . $ext;
-      $destino = 'img/' . $nombreDeImagen;
+      move_uploaded_file($_FILES['imagenDePerfil']['tmp_name'], 'img/' . $nombreDeImagen);
+      }else{
+      $errorImagenDePerfil = 'El Formato es inválido';
+      }
 
-      move_uploaded_file($origen, $destino);
     }
 
 }
-
-
 
  ?>
 
@@ -81,11 +79,12 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
 
           <br>
 
+
           <div class="row">
             <div class="col-12 nombre form-group">
               <label for="nombreCompleto">Nombre y Apellido:</label>
-              <input class="form-control" id="nombreCompleto"  type="text" name="nombreCompleto" value="<?php echo $_POST['nombreCompleto'] ?? '' ?>" placeholder="--> Ingrese su nombre">
-              <?php echo $errorNombreCompleto ?>
+              <input class="form-control" id="nombreCompleto"  type="text" name="nombreCompleto" value="<?php echo $_POST['nombreCompleto'] ?? '' ?>">
+              <span class="error"><?php echo $errorNombreCompleto ?></span>
             </div>
           </div>
 
@@ -118,7 +117,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
             <div class="col-12 form-group">
               <label for="correoElectronico">Correo Electrónico:</label>
               <input class="form-control" id="correoElectronico" type="text" name="correoElectronico" value="<?php echo $_POST['correoElectronico'] ?? '' ?>">
-              <?php echo $errorCorreo ?>
+              <span class="error"><?php echo $errorCorreo ?></span>
             </div>
           </div>
 
@@ -128,7 +127,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
             <div class="col-12 form-group">
               <label for="nombreDeUsuario">Nombre de Usuario:</label>
               <input class="form-control" id="nombreDeUsuario" type="text" name="nombreDeUsuario" value="<?php echo $_POST['nombreDeUsuario'] ?? '' ?>" placeholder="">
-              <?php echo $errorUsuario ?>
+              <span class="error"><?php echo $errorUsuario ?></span>
             </div>
           </div>
 
@@ -138,7 +137,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
             <div class="col-12">
               <label for="imagenDePerfil">Imagen de Perfil:</label><br>
               <input class="" type="file" name="imagenDePerfil" value="">
-              <?php echo $errorImagenDePerfil ?>
+              <span class="error"><?php echo $errorImagenDePerfil ?></span>
             </div>
           </div>
 
@@ -148,7 +147,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
             <div class="col-12 form-group">
               <label for="pass">Contraseña:</label>
               <input class="form-control" id="pass" type="password" name="pass" value="<?php echo $_POST['pass'] ?? '' ?>" placeholder="">
-              <?php echo $errorPass ?>
+              <span class="error"><?php echo $errorPass ?></span>
             </div>
           </div>
 
@@ -158,17 +157,17 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
             <div class="col-12 form-group">
               <label for="passDeNuevo">Repita su contraseña:</label>
               <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="<?php echo $_POST['passDeNuevo'] ?? '' ?>" placeholder="">
-              <?php echo $errorPassDeNuevo ?>
+              <span class="error"><?php echo $errorPassDeNuevo ?></span>
             </div>
           </div>
 
           <br>
 
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 botones">
               <button class="btn btn-primary" type="submit" name="button">¡Registrame!</button>
-              <br><br>
-              <button class="btn btn-primary" type="reset" name="button">Cancelar</button>
+              &nbsp
+              <button class="btb btn-primary" type="reset" name="button">Cancelar</button>
             </div>
           </div>
 
