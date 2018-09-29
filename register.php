@@ -36,7 +36,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
     }
 
     if( empty($_POST['nombreDeUsuario']) ){
-        $errorUsuario = 'Debe ingrear nombre de usuario';
+        $errorUsuario = 'Debe ingresar nombre de usuario';
     } elseif ($_POST['nombreDeUsuario'] < 5 )  {
         $errorUsuario = 'El nombre debe poseer al menos 5 caracteres';
 
@@ -44,7 +44,9 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
 
     if( empty($_POST['pass']) ){
         $errorPass = 'Debe ingresar una contraseña';
-    } elseif ($_POST['pass'] < 8 ) {
+    }
+
+    if ($_POST['pass'] < 8 ) {
         $errorPass= 'La contraseña ingresada es demasiado corta';
 
     }
@@ -82,7 +84,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           <div class="row">
             <div class="col-12 nombre form-group">
               <label for="nombreCompleto">Nombre y Apellido:</label>
-              <input class="form-control" id="nombreCompleto"  type="text" name="nombreCompleto" value="" placeholder="--> Ingrese su nombre">
+              <input class="form-control" id="nombreCompleto"  type="text" name="nombreCompleto" value="<?php echo $_POST['nombreCompleto'] ?? '' ?>" placeholder="--> Ingrese su nombre">
               <?php echo $errorNombreCompleto ?>
             </div>
           </div>
@@ -115,7 +117,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           <div class="row correo">
             <div class="col-12 form-group">
               <label for="correoElectronico">Correo Electrónico:</label>
-              <input class="form-control" id="correoElectronico" type="text" name="correoElectronico" value="">
+              <input class="form-control" id="correoElectronico" type="text" name="correoElectronico" value="<?php echo $_POST['correoElectronico'] ?? '' ?>">
               <?php echo $errorCorreo ?>
             </div>
           </div>
@@ -145,7 +147,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           <div class="row">
             <div class="col-12 form-group">
               <label for="pass">Contraseña:</label>
-              <input class="form-control" id="pass" type="password" name="pass" value="">
+              <input class="form-control" id="pass" type="password" name="pass" value="<?php echo $_POST['pass'] ?? '' ?>" placeholder="">
               <?php echo $errorPass ?>
             </div>
           </div>
@@ -155,7 +157,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           <div class="row">
             <div class="col-12 form-group">
               <label for="passDeNuevo">Repita su contraseña:</label>
-              <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="" placeholder="">
+              <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="<?php echo $_POST['passDeNuevo'] ?? '' ?>" placeholder="">
               <?php echo $errorPassDeNuevo ?>
             </div>
           </div>
