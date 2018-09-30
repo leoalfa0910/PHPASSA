@@ -5,6 +5,7 @@ include('header.php');
 
 include('paises.php');
 
+
 $errorNombreCompleto = '';
 $errorCorreo = '';
 $errorImagenDePerfil = '';
@@ -167,7 +168,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
             <div class="col-12 botones">
               <button class="btn btn-primary" type="submit" name="button">¡Registrame!</button>
               &nbsp
-              <button class="btb btn-primary" type="reset" name="button">Cancelar</button>
+              <button class="btn btn-primary" type="reset" name="button">Cancelar</button>
             </div>
           </div>
 
