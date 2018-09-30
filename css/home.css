@@ -1,5 +1,5 @@
 section#home {
-  background-color: #979DA2;
+  background-color: #333;
 }
 
 section#home img{
@@ -7,13 +7,13 @@ section#home img{
 }
 
 section#home h1{
-  color: rgb(51, 87, 122);
+  color: white;
   font-size: 35px;
   font-family: 'Montserrat';
 }
 
 section#home h5{
-  color: rgb(51, 87, 122);
+  color: white;
   font-size: 15px;
   font-family: 'Montserrat';
 }

@@ -1,3 +1,6 @@
+section#productos h2 {
+  color: rgb(51, 87, 122);
+}
 section#productos .card {
     position: relative;
     min-height: 400px;
