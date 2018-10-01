@@ -1,20 +1,36 @@
 
+section#login{
+  padding-bottom: 50px;
+}
 
 
 
-
-
-
-
-
-
-.contenedorUno {
-
+.contenedorDos{
+text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
 
 }
 
-.contenedorDos {
+.logoface{
+  width: 200px;
+}
 
-  text-align: center;
+.form-group{
+  font-weight: bold;
+}
+
+.face{
+  padding-top: 25px;
+}
+
+
+.cuenta{
+  padding-top: 30px;
+  padding-bottom: 15px;
+
+}
+
+.form-control{
 
 }
