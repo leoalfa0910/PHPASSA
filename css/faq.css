@@ -4,13 +4,8 @@ text-decoration: underline;
 
 }
 
-.card {
-
-}
-
-.collapse{
+.card.card-body{
   font-style: oblique;
-
 }
 
 .question{
