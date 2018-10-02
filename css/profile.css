@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+
+section#profile {
+    min-height: calc(100vh - 225px);
+
+}
+
+section#profile .card {
+    margin-bottom: 20px;
+}
+
+section#profile .card-header {
+    height: 130px;
+    max-width: 100%;
+}
+
+section#profile .row.card-header>div {
+    padding: 0 20px;
+}
+
+section#profile .card-header img {
+    margin-top: 20px;
+    border: 10px solid white;
+    box-shadow: 1px 0 2px #555;
+}
+
+section#profile .card-header span {
+    font-size: 45px;
+    font-family: Lato;
+    font-weight: bold;
+}
+
+section#profile span.nombre {
+    color: #636C72;
+}
+
+section#profile span.profile {
+    color: #9A9EA0;
+}
+
+section#profile .card-header span.separador {
+    color: #CDDADD;
+}
+
+section#profile h3 {
+    margin-top: 20px;
+    color: #636C72;
+}

@@ -1,36 +1,31 @@
-
-section#login{
-  padding-bottom: 50px;
+section#login {
+    padding-bottom: 50px;
 }
 
 
 
-.contenedorDos{
-text-align: center;
-  padding-top: 50px;
-  padding-bottom: 20px;
+.contenedorDos {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
 
 }
 
-.logoface{
-  width: 200px;
+.logoface {
+    width: 200px;
 }
 
-.form-group{
-  font-weight: bold;
+.form-group {
+    font-weight: bold;
 }
 
-.face{
-  padding-top: 25px;
+.face {
+    padding-top: 25px;
 }
 
 
-.cuenta{
-  padding-top: 30px;
-  padding-bottom: 15px;
-
-}
-
-.form-control{
+.cuenta {
+    padding-top: 30px;
+    padding-bottom: 15px;
 
 }

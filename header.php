@@ -29,6 +29,12 @@
 		        <a class="nav-link" href="productos.php">Productos</a>
 		      </li>
 		      <li class="nav-item">
+		        <a class="nav-link" href="faq.php">FAQ</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="profile.php">Profile</a>
+		      </li>
+		      <li class="nav-item">
 		        <a class="nav-link" href="login.php">Login</a>
 		      </li>
 		      <li class="nav-item">

@@ -10,15 +10,18 @@ img {
     max-width: 100%;
     height: auto;
 }
+
 h2 {
-	font-size: 30px;
-	margin-top: 30px;
+    font-size: 30px;
+    margin-top: 30px;
+    color: rgb(51, 87, 122);
 }
 
 a {
-	color: #33577A;
+    color: #33577A;
 }
+
 a:hover {
-	text-decoration: none;
-	color:rgb(251, 145, 1);
+    text-decoration: none;
+    color: rgb(251, 145, 1);
 }

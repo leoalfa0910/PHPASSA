@@ -1,25 +1,21 @@
 section#home {
-  background-color: #333;
+    background-color: #333;
 }
 
-section#home img{
-  width: 200px;
+section#home img {
+    width: 200px;
 }
 
-section#home h1{
-  color: white;
-  font-size: 35px;
-  font-family: 'Montserrat';
+section#home h1 {
+    color: white;
+    font-size: 35px;
+    font-family: 'Montserrat';
 }
 
-section#home h5{
-  color: white;
-  font-size: 15px;
-  font-family: 'Montserrat';
-}
-
-section#destacados h2{
-  color: rgb(51, 87, 122);
+section#home h5 {
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat';
 }
 
 section#destacados .card {
@@ -69,5 +65,5 @@ section#destacados p {
 }
 
 section#destacados div.row {
-  justify-content: center;
+    justify-content: center;
 }
