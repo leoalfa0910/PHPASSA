@@ -94,8 +94,8 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           <div class="row">
             <div class="col-12 form-group sexo">
               <label class="" for="">Sexo:</label>
-              <input class="form-check-input" type="radio" name="Sexo" value="M"><label class="form-check-label">Masculino</label>
-              <input class="form-check-input" type="radio" name="Sexo" value="F"><label class="form-check-label">Femenino</label>
+              <input id="sexo" class="form-check-input" type="radio" name="Sexo" value="M"><label class="form-check-label">Masculino</label>
+              <input id="sexo" class="form-check-input" type="radio" name="Sexo" value="F"><label class="form-check-label">Femenino</label>
             </div>
           </div>
 
