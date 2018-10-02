@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,700');
 
 section#profile {
     min-height: calc(100vh - 225px);
@@ -26,7 +26,7 @@ section#profile .card-header img {
 
 section#profile .card-header p.titulo {
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 section#profile .card-header p.titulo span {
@@ -36,7 +36,8 @@ section#profile .card-header p.titulo span {
 }
 
 section#profile .card-body {
-    margin-top: 160px;
+    margin-top: 180px;
+    text-align: center;
 }
 
 section#profile span.nombre {
@@ -51,8 +52,16 @@ section#profile span.profile {
     color: #9A9EA0;
 }
 
-section#profile .card-header span.separador {
+section#profile .card-header p.titulo span.separador {
+    font-size: 18px;
+    margin: 0 10px 0 15px;
+    display: inline-block;
     color: #CDDADD;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
 }
 
 section#profile h3 {
