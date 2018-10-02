@@ -9,8 +9,8 @@
 	    <div class="card">
 			  <div class="card-header">
 			  	<div class="row">
-				  	<div class="col-md-4"><img src="img/profile.png"></div>
-				  	<div class="col-md-8"><span class="nombre">Daniela</span><span class="separador"> | </span><span class="profile">Profile</span>
+				  	<div class="col-md-4 img-container"><img src="img/profile.png"></div>
+				  	<div class="col-md-8"><p class="titulo"><span class="nombre">Daniela</span><span class="separador"> | </span><span class="profile">Profile</span></p>
 				  	</div>
 				 </div>
 			  </div>
@@ -30,12 +30,13 @@
 		    <br>
 		    <h3 class="text-center">Historial de compras</h3>
 			<br>
+			<div class="table-responsive">
 			<table class="table">
 			  <thead>
 			    <tr>
 			      <th scope="col">#</th>
 			      <th scope="col">Producto</th>
-			      <th scope="col">Fech de compra</th>
+			      <th scope="col">Compra</th>
 			      <th scope="col">Importe</th>
 			    </tr>
 			  </thead>
@@ -60,6 +61,7 @@
 			    </tr>
 			  </tbody>
 			</table>
+			</div>
 		    <p class="text-center"><a href="#" class="btn btn-primary">Go somewhere</a></p>
 		  </div>
 		</div>

@@ -24,14 +24,27 @@ section#profile .card-header img {
     box-shadow: 1px 0 2px #555;
 }
 
-section#profile .card-header span {
-    font-size: 45px;
+section#profile .card-header p.titulo {
+    text-align: center;
+    margin: 10px 0;
+}
+
+section#profile .card-header p.titulo span {
+    font-size: 24px;
     font-family: Lato;
     font-weight: bold;
 }
 
+section#profile .card-body {
+    margin-top: 160px;
+}
+
 section#profile span.nombre {
     color: #636C72;
+}
+
+section#profile .img-container {
+    text-align: center;
 }
 
 section#profile span.profile {

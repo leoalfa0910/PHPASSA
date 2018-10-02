@@ -1,12 +1,21 @@
 @media(min-width: 576px) {
-  section#home img{
-    width: 225px;
-  }
+    section#home img {
+        width: 225px;
+    }
 }
 
 @media(min-width: 768px) {
-  section#home img{
-    width: 250px;
+    section#home img {
+        width: 250px;
+    }
+
+    section#profile .card-body {
+        margin-top: 0;
+    }
+
+    section#profile .card-header p.titulo span {
+        font-size: 45px;
+    }
 }
 
 @media(min-width: 992px) {
