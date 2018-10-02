@@ -68,3 +68,7 @@ section#profile h3 {
     margin-top: 20px;
     color: #636C72;
 }
+
+section#profile .table .thead-dark th {
+    background-color: #444;
+}

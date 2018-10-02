@@ -31,8 +31,8 @@
 		    <h3 class="text-center">Historial de compras</h3>
 			<br>
 			<div class="table-responsive">
-			<table class="table">
-			  <thead>
+			<table class="table table-striped table-sm">
+			  <thead class="thead-dark">
 			    <tr>
 			      <th scope="col">#</th>
 			      <th scope="col">Producto</th>
