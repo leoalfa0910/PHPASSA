@@ -62,7 +62,6 @@
 			  </tbody>
 			</table>
 			</div>
-		    <p class="text-center"><a href="#" class="btn btn-primary">Go somewhere</a></p>
 		  </div>
 		</div>
 	</div>
