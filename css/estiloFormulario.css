@@ -7,12 +7,6 @@ section#register .error {
 	font-weight: bold;
 }
 
-section#register label {
-	text-decoration: underline;
-	font-weight: bold;
-	color: rgb(51, 87, 122);
-}
-
 section#register .botones {
 	display: flex;
 	justify-content: flex-end;

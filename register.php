@@ -147,7 +147,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           <div class="row">
             <div class="col-12 form-group">
               <label for="pass">Contraseña:</label>
-              <input class="form-control" id="pass" type="password" name="pass" value="<?php echo $_POST['pass'] ?? '' ?>" placeholder="">
+              <input class="form-control" id="pass" type="password" name="pass" value="" placeholder="">
               <span class="error"><?php echo $errorPass ?></span>
             </div>
           </div>
@@ -157,7 +157,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           <div class="row">
             <div class="col-12 form-group">
               <label for="passDeNuevo">Repita su contraseña:</label>
-              <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="<?php echo $_POST['passDeNuevo'] ?? '' ?>" placeholder="">
+              <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="" placeholder="">
               <span class="error"><?php echo $errorPassDeNuevo ?></span>
             </div>
           </div>
