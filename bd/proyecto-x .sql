@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-10-2018 a las 16:32:56
+-- Tiempo de generación: 12-10-2018 a las 16:59:23
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `proyecto-x`
 --
+CREATE DATABASE IF NOT EXISTS `proyecto-x` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `proyecto-x`;
 
 -- --------------------------------------------------------
 
