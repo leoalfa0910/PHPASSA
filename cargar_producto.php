@@ -1,5 +1,11 @@
 <?php include 'header.php'; 
 
+include 'conexion-bd.php';
+
+echo '<pre>';
+var_dump($conex);
+echo '</pre>';
+
 
 
 
