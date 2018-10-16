@@ -1,103 +1,6 @@
 <?php include 'header.php'; 
 
-include 'conexion-bd.php';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$categorias=['hardware', 'software', 'auriculares', 'teclados', 'motherboards', 'discos', 'memorias' ,'placas de video', 'sillas', 'gabinetes', 'fuentes', 'mouse'];
+$categorias=['hardware', 'software', 'auriculares', 'teclados', 'motherboards', 'discos', 'memorias' ,'placas de video', 'sillas', 'gabinetes', 'fuentes', 'mouse', 'destacado'];
 $marcas=['logitech', 'redragon', 'wd', 'kingston', 'gigabyte', 'radeon', 'aerocool', 'asus', 'NZXT', 'evga', 'scandisk'];
 
 ?>
@@ -111,14 +14,10 @@ $marcas=['logitech', 'redragon', 'wd', 'kingston', 'gigabyte', 'radeon', 'aeroco
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-6">
-				<form method="POST">
+				<form method="POST" action="Controllers/AgregarProducto.php" enctype="multipart/form-data" id="form">
 					<div class="form-group mt-4">
 						<label for="nombre">Nombre del producto</label>
-						<input class="form-control" type="text" name="nombre" id="nombre">
-					</div>
-					<div class="form-group mt-4">
-						<label for="nombre">Marca del producto</label>
-						<input class="form-control" type="text" name="marca" id="marca">
+						<input class="form-control" type="text" name="nombre" id="nombre" autofocus>
 					</div>
 					<div class="form-group mt-4">
 						<label for="nombre">Descripción del producto</label>
@@ -126,7 +25,7 @@ $marcas=['logitech', 'redragon', 'wd', 'kingston', 'gigabyte', 'radeon', 'aeroco
 					</div>
 					<div class="form-group mt-4">
 						<label for="categoria">Seleccionar Categoría</label>
-						<select class="form-control" name="categoria[]" id="categoria" multiple>
+						<select class="form-control" name="categorias[]" id="categoria" form="form" multiple>
 							<option>Seleccionar categoría</option>
 							<?php 
 								foreach($categorias as $categoria) {
@@ -154,8 +53,8 @@ $marcas=['logitech', 'redragon', 'wd', 'kingston', 'gigabyte', 'radeon', 'aeroco
 						<input class="form-control" type="number" name="precio" id="precio">
 					</div>
 					<div class="form-group mt-4">
-						<label for="precio">Stock</label>
-						<input class="form-control" type="number" name="precio" id="precio">
+						<label for="stock">Stock</label>
+						<input class="form-control" type="number" name="stock" id="stock">
 					</div>
 					<div class="form-group mt-4">
 						<label for="foto">Foto del producto</label><br>
