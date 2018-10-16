@@ -1,4 +1,4 @@
-<?php 
+<?php
 include('header.php');
 // echo '<pre>';
 // var_dump($productos);die;
@@ -25,9 +25,9 @@ foreach($productos as $producto) {
 				<h4>$<?php echo $single->precio ?>.-</h4>
 				<small>Cod. de artículo: <?php echo $single->id ?></small>
 				<br>
-				<?php 
+				<?php
 				$categorias = json_decode($producto->categoria, true);
-				
+
 				foreach( $categorias as $categoria ) {
 					$categoria = strtoupper( $categoria );
 					 if( $categoria != 'DESTACADO' ) {

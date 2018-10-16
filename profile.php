@@ -1,4 +1,13 @@
-<?php include 'header.php' ?>
+<?php
+include 'header.php';
+
+foreach($usuarios as $usuario) {
+	if ($usuario->id == $_GET['id'] + 0){
+		$single = $usuario;
+		break;
+	}
+}
+?>
 
 <!-- . profile -->
 <section id="profile">
@@ -10,7 +19,7 @@
 			  <div class="card-header">
 			  	<div class="row">
 				  	<div class="col-md-4 img-container"><img src="img/profile.png"></div>
-				  	<div class="col-md-8"><p class="titulo"><span class="nombre">Daniela</span><span class="separador"> | </span><span class="profile">Profile</span></p>
+				  	<div class="col-md-8"><p class="titulo"><span class="nombre"><?php echo $single->getNombre(); ?></span><span class="separador"> | </span><span class="profile">Profile</span></p>
 				  	</div>
 				 </div>
 			  </div>
