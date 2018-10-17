@@ -19,6 +19,7 @@ section#profile .row.card-header>div {
 }
 
 section#profile .card-header img {
+    background-color: #eee;
     margin-top: 20px;
     border: 10px solid white;
     box-shadow: 1px 0 2px #555;

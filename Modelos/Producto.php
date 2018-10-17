@@ -1,7 +1,6 @@
 <?php 
 namespace App\Modelos;
 
-// use App\Modelos\DB;
 use App\Traits\SubirImagen;
 
 
