@@ -23,7 +23,7 @@ if ($_POST) {
 	 * Subo la foto y con lo que me devuelve la seteo.
 	 */
 
-	if (isset($_FILES['foto'])) $producto->setFoto($producto->subirImagen());
+	if (isset($_FILES['foto'])) $producto->setFoto($producto->subirImagen($producto));
 	
 	/**
 	 * Guardamos
@@ -35,7 +35,7 @@ if ($_POST) {
 	/**
 	 * Nos vamos a la página del producto nuevo
 	 */
-	$pdo = DB::conectar();
+	// $pdo = DB::conectar();
 	$id = $resp[2];
 	exit(header("Location: /producto.php?id={$id}"));
 }
