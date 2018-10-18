@@ -90,7 +90,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
           </div>
 
           <br>
-
+          
           <div class="row">
             <div class="col-12 form-group sexo">
               <label class="" for="">Sexo:</label>
