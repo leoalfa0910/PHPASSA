@@ -20,7 +20,7 @@
       }
 
       if ($errorEmail == false && $errorContra == false){
-        Header ("location: " . APP_URL . "index.php"); exit();
+        Header ("location: " . APP_URL . "/index.php"); exit();
 
       }
       //var_dump($_POST);
