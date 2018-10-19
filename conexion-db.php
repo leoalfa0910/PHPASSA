@@ -1,15 +1,11 @@
 <?php
-  $dsn = 'mysql:host=localhost;dbname=poyecto-x';
+  $dsn = 'mysql:host=localhost;dbname=proyecto-x';
   $user = 'root';
   $pass = '';
   $opt= [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-
-  try{
-
+  try {
     $conex = new PDO($dsn, $user, $pass, $opt);
-
-  }catch( PDOException $exception ){
-
+  } catch( PDOException $exception ){
     echo 'El error es:'. $exception->getMessage();
     
   }

@@ -26,6 +26,9 @@
 		        <a class="nav-link" href="<?php echo APP_URL; ?>">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
+		        <a class="nav-link" href="cargar_producto.php">Crear producto</a>
+		      </li>
+		      <li class="nav-item">
 		        <a class="nav-link" href="productos.php">Productos</a>
 		      </li>
 		      <li class="nav-item">
