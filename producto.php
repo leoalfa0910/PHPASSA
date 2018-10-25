@@ -3,6 +3,7 @@ include('header.php');
 // echo '<pre>';
 // var_dump($productos);die;
 // echo '</pre>';
+// var_dump($productos); die;
 foreach($productos as $producto) {
 	if ($producto->id == $_GET['id'] + 0){
 		$single = $producto;
