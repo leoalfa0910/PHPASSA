@@ -4,6 +4,8 @@ namespace App\Controllers;
 include_once '../autoload.php';
 use App\Modelos\Producto;
 use App\Modelos\DB;
+
+
 if ($_POST) {
 	/**
 	 * Las Variables

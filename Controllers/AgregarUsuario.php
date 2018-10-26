@@ -2,8 +2,10 @@
 namespace App\Controllers;
 
 include '../autoload.php';
+
 use App\Modelos\Usuario;
 use App\Modelos\DB;
+
 if ($_POST) {
 	/**
 	 * Las Variables
@@ -11,7 +13,7 @@ if ($_POST) {
 	$nombre = $_POST['nombre'];
 	$apellido = $_POST['apellido'];
 	$email = $_POST['email'];
-	$contrasenia = $_POST['contrasenia'];
+	$contrasenia = $_POST['contrasenia']; $_SESSION['error_nombre'] = 'asdasdad';
 
 	/**
 	 * Instancio el usuario sin la foto ya que la pongo después cuando llamo al metodo del trait que sube la foto y me devuelve la ruta para guardarla en la DB...
