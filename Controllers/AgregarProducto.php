@@ -1,7 +1,7 @@
 <?php 
 namespace App\Controllers;
 
-include '../autoload.php';
+include_once '../autoload.php';
 use App\Modelos\Producto;
 use App\Modelos\DB;
 if ($_POST) {
@@ -22,8 +22,9 @@ if ($_POST) {
 	/**
 	 * Subo la foto y con lo que me devuelve la seteo.
 	 */
+	$rutaImagen = $producto->subirImagen($producto);
 
-	if (isset($_FILES['foto'])) $producto->setFoto($producto->subirImagen($producto));
+	if (isset($_FILES['foto'])) $producto->setFoto($rutaImagen);
 	
 	/**
 	 * Guardamos
