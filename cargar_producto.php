@@ -1,7 +1,7 @@
 <?php include 'header.php'; 
 
 $categorias=['hardware', 'software', 'auriculares', 'teclados', 'motherboards', 'discos', 'memorias' ,'placas de video', 'sillas', 'gabinetes', 'fuentes', 'mouse', 'destacado' , 'impresoras'];
-$marcas=['logitech', 'redragon', 'wd', 'kingston', 'gigabyte', 'radeon', 'aerocool', 'asus', 'NZXT', 'evga', 'scandisk', 'samsung'];
+$marcas=['logitech', 'redragon', 'wd', 'kingston', 'gigabyte', 'radeon', 'aerocool', 'asus', 'NZXT', 'evga', 'scandisk', 'samsung', 'intel'];
 
 ?>
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ $marcas=['logitech', 'redragon', 'wd', 'kingston', 'gigabyte', 'radeon', 'aeroco
 						<div class="col-md-4">
 							<div class="form-group mt-4">
 								<label for="destacado">Destacado</label><br>
-								<input type="checkbox" id="destacado" name="destacado">
+								<input type="checkbox" value="1" id="destacado" name="destacado">
 							</div>
 						</div>
 					</div>
