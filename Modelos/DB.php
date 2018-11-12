@@ -18,7 +18,7 @@ class DB {
 
     		$error = 'El error es: ' . $exception->getMessage();
   			return $error;
+
   		}
 	}
-
 }
