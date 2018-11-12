@@ -14,11 +14,11 @@ class DB {
     		$conex = new \PDO( self::$dsn, self::$user, self::$pass, self::$opt );
     		return $conex;
 
-  		} catch( PDOException $exception ){
+  		} catch ( PDOException $exception ) {
 
     		$error = 'El error es: ' . $exception->getMessage();
   			return $error;
+
   		}
 	}
-
 }

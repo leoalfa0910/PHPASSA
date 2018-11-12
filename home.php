@@ -22,11 +22,11 @@
     foreach($destacados as $destacado) { ?>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card my-3">
-          <a href="<?php echo APP_URL . 'producto.php?id_producto=' . $destacado['id_producto'] ?>"><img class="card-img-top" src="<?php echo $destacado['img_chica'] ?>" alt="Card image cap"></a>
+          <a href="<?php echo APP_URL . 'producto.php?id=' . $destacado->id ?>"><img class="card-img-top" src="<?php echo $destacado->foto ?>" alt="Card image cap"></a>
           <div class="card-body">
-            <a href="<?php echo APP_URL . 'producto.php?id_producto=' . $destacado['id_producto'] ?>"><h4 class="card-title"><?php echo $destacado['nombre'] ?></h4></a>
-            <p class="card-text"><?php echo $destacado['descr_corta'] ?></p>
-            <h5>$<?php echo $destacado['precio'] ?>.-</h5>
+            <a href="<?php echo APP_URL . 'producto.php?id=' . $destacado->id ?>"><h4 class="card-title"><?php echo $destacado->nombre ?></h4></a>
+            <p class="card-text"><?php echo substr($destacado->descripcion, 0, 50); ?></p>
+            <h5>$<?php echo $destacado->precio ?>.-</h5>
             <a href="#" class="btn">Comprar</a>
           </div>
         </div>
