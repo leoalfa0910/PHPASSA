@@ -18,9 +18,13 @@ section#home h5 {
     font-family: 'Montserrat';
 }
 
+section#destacados {
+    margin-bottom: 30px;
+}
+
 section#destacados .card {
     position: relative;
-    min-height: 400px;
+    height: 100%;
     max-width: 300px;
     margin: 0 auto;
     border-radius: 0;
