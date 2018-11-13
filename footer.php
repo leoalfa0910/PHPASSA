@@ -1,12 +1,33 @@
 <!-- . footer -->
 <footer>
     <div  class="footer container">
-    	<br>
-    	<br>
-    	<br>
-    	<br>
-    	<small>Este es el footer</small>
-    </div>
+    	<div class="row justify-content-center">
+	    	<div class="col-sm-4">
+	    		<h6 class="text-center">Páginas</h6>
+	    		<!-- . listas-footer -->
+	    		<ul class="listas-footer">
+	    		    <a href="/productos.php"><li class="item-footer">Productos</li></a>
+	    		    <a href="/faqs.php"><li class="item-footer">Faqs</li></a>
+	    		    <a href="/profile.php?id=1"><li class="item-footer">Perfil</li></a>
+	    		    <a href="/.php"><li class="item-footer">Item</li></a>
+	    		</ul>
+	    		<!-- fin . listas-footer -->
+	    	</div>
+	    	<div class="col-sm-4">
+	    		<h6 class="text-center">Usuario</h6>
+	    		<!-- . listas-footer -->
+	    		<ul class="listas-footer">
+	    		    <a href="/register.php"><li class="item-footer">Registrarse</li></a>
+	    		    <a href="/login.php"><li class="item-footer">Login</li></a>
+	    		    <a href="/contacto.php"><li class="item-footer">Contacto</li></a>
+	    		    <a href="/suscribirse.php"><li class="item-footer">Suscribirse</li></a>
+	    		</ul>
+	    		<!-- fin . listas-footer -->
+	    	</div>
+    	</div><!-- fin .row -->
+    	<br>	
+    	<p class="text-center"><small>&copy; 2018. Todos los derechos reservados</small></p>
+    </div><!-- fin .container -->
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

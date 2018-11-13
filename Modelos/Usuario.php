@@ -17,183 +17,184 @@ class Usuario {
   private $dni;
   private $avatar;
   private $contrasenia;
-}
 
 
-use SubirImagen;
 
-/**
- * Constructor
- */
+	use SubirImagen;
 
-public function __construct($nombre, $apellido, $email, $contrasenia){
-  $this->nombre = $nombre;
-  $this->apellido = $apellido;
-  $this->email = $email;
-  $this->contrasenia = $contrasenia;
-}
+	/**
+	* Constructor
+	*/
 
-public function getNombre()
-{
-    return $this->nombre;
-}
+	public function __construct($nombre, $apellido, $email, $contrasenia){
+		$this->nombre = $nombre;
+		$this->apellido = $apellido;
+		$this->email = $email;
+		$this->contrasenia = $contrasenia;
+	}
 
-public function setNombre($nombre)
-{
-    $this->nombre = $nombre;
+	public function getNombre()
+	{
+		return $this->nombre;
+	}
 
-    return $this;
-}
+	public function setNombre($nombre)
+	{
+	  	$this->nombre = $nombre;
 
-public function getApellido()
-{
-    return $this->apellido;
-}
+	  	return $this;
+	}
 
-public function setApellido($apellido)
-{
-    $this->apellido = $apellido;
+	public function getApellido()
+	{
+	  	return $this->apellido;
+	}
 
-    return $this;
-}
+	public function setApellido($apellido)
+	{
+	  $this->apellido = $apellido;
 
-public function getEmail()
-{
-    return $this->email;
-}
+	  return $this;
+	}
 
-public function setEmail($email)
-{
-    $this->email = $email;
+	public function getEmail()
+	{
+	  return $this->email;
+	}
 
-    return $this;
-}
+	public function setEmail($email)
+	{
+	  $this->email = $email;
 
-public function getSexo()
-{
-    return $this->sexo;
-}
+	  return $this;
+	}
 
-public function setSexo($sexo)
-{
-    $this->sexo = $sexo;
+	public function getSexo()
+	{
+	  return $this->sexo;
+	}
 
-    return $this;
-}
+	public function setSexo($sexo)
+	{
+	  $this->sexo = $sexo;
 
-public function getNacionalidad()
-{
-    return $this->nacionalidad;
-}
+	  return $this;
+	}
 
-public function setNacionalidad($nacionalidad)
-{
-    $this->nacionalidad = $nacionalidad;
+	public function getNacionalidad()
+	{
+	  return $this->nacionalidad;
+	}
 
-    return $this;
-}
+	public function setNacionalidad($nacionalidad)
+	{
+	  $this->nacionalidad = $nacionalidad;
 
-public function getNacimiento()
-{
-    return $this->nacimiento;
-}
+	  return $this;
+	}
 
-public function setNacimiento($nacimiento)
-{
-    $this->nacimiento = $nacimiento;
+	public function getNacimiento()
+	{
+	  return $this->nacimiento;
+	}
 
-    return $this;
-}
+	public function setNacimiento($nacimiento)
+	{
+	  $this->nacimiento = $nacimiento;
 
-public function getDireccion()
-{
-    return $this->direccion;
-}
+	  return $this;
+	}
 
-public function setDireccion($direccion)
-{
-    $this->direccion = $direccion;
+	public function getDireccion()
+	{
+	  return $this->direccion;
+	}
 
-    return $this;
-}
+	public function setDireccion($direccion)
+	{
+	  $this->direccion = $direccion;
 
-public function getCp()
-{
-    return $this->cp;
-}
+	  return $this;
+	}
 
-public function setCp($cp)
-{
-    $this->cp = $cp;
+	public function getCp()
+	{
+	  return $this->cp;
+	}
 
-    return $this;
-}
+	public function setCp($cp)
+	{
+	  $this->cp = $cp;
 
-public function getTelefono()
-{
-    return $this->telefono;
-}
+	  return $this;
+	}
 
-public function setTelefono($telefono)
-{
-    $this->telefono = $telefono;
+	public function getTelefono()
+	{
+	  return $this->telefono;
+	}
 
-    return $this;
-}
+	public function setTelefono($telefono)
+	{
+	  $this->telefono = $telefono;
 
-public function getDni()
-{
-    return $this->dni;
-}
+	  return $this;
+	}
 
-public function setDni($dni)
-{
-    $this->dni = $dni;
+	public function getDni()
+	{
+	  return $this->dni;
+	}
 
-    return $this;
-}
+	public function setDni($dni)
+	{
+	  $this->dni = $dni;
 
-public function getAvatar()
-{
-    return $this->avatar;
-}
+	  return $this;
+	}
 
-public function setAvatar($avatar)
-{
-    $this->avatar = $avatar;
+	public function getAvatar()
+	{
+	  return $this->avatar;
+	}
 
-    return $this;
-}
+	public function setAvatar($avatar)
+	{
+	  $this->avatar = $avatar;
 
-public function getContrasenia()
-{
-    return $this->contrasenia;
-}
+	  return $this;
+	}
 
-public function setContrasenia($contrasenia)
-{
-    $this->contrasenia = $contrasenia;
+	public function getContrasenia()
+	{
+	  return $this->contrasenia;
+	}
 
-    return $this;
-}
+	public function setContrasenia($contrasenia)
+	{
+	  $this->contrasenia = $contrasenia;
 
-/**
- * @param
- * @return array [$this, $response];
- */
-public function guardarUsuario() {
-  try {
-  $pdo = DB::conectar();
-  $sql = 'INSERT INTO usuarios (nombre, apellido, email, contrasenia) VALUES (:nombre, :apellido, :email, :contrasenia)';
-  $stmt = $pdo->prepare($sql);
-  $stmt->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
-  $stmt->bindValue(':apellido', $this->apellido, \PDO::PARAM_STR);
-  $stmt->bindValue(':email', $this->email, \PDO::PARAM_STR);
-  $stmt->bindValue(':contrasenia', $this->contrasenia, \PDO::PARAM_STR);
-  $stmt->execute();
-  $resp = "Usuario registrado con exito";
-  } catch(\	PDOException $exception) {
-    $resp = "Se produjo un error: {$exception->getMessage()}";
-  }
-  return [$this, $resp, $pdo->lastInsertId()];
+	  return $this;
+	}
+
+	/**
+	* @param
+	* @return array [$this, $response];
+	*/
+	public function guardarUsuario() {
+		try {
+			$pdo = DB::conectar();
+			$sql = 'INSERT INTO usuarios (nombre, apellido, email, contrasenia) VALUES (:nombre, :apellido, :email, :contrasenia)';
+			$stmt = $pdo->prepare($sql);
+			$stmt->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
+			$stmt->bindValue(':apellido', $this->apellido, \PDO::PARAM_STR);
+			$stmt->bindValue(':email', $this->email, \PDO::PARAM_STR);
+			$stmt->bindValue(':contrasenia', $this->contrasenia, \PDO::PARAM_STR);
+			$stmt->execute();
+			$resp = "Usuario registrado con exito";
+		} catch(\	PDOException $exception) {
+		  	$resp = "Se produjo un error: {$exception->getMessage()}";
+		}
+		return [$this, $resp, $pdo->lastInsertId()];
+	}
 }

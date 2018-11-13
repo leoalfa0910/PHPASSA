@@ -25,3 +25,37 @@ a:hover {
     text-decoration: none;
     color: rgb(251, 145, 1);
 }
+
+.btn.btn-primary {
+    background-color: #33577a;
+    border: 2px solid #33577a;
+    border-radius: 0;
+    padding: 10px 30px;
+    transition: 300ms;
+}
+
+.btn.btn-primary:hover {
+    background-color: white;
+    color: #33577a;
+}
+
+.form-control {
+
+    border-radius: 0 !important;
+}
+
+.form-control {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.form-control:focus,
+select:focus,
+textarea:focus {
+    border-top: #ced4da;
+    border-left: #ced4da;
+    border-right: #ced4da;
+    border-bottom: 2px solid lightblue;
+    box-shadow: none;
+}
