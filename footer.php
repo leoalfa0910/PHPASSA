@@ -18,8 +18,8 @@
 	    		<ul class="listas-footer">
 	    		    <a href="<?php echo APP_URL; ?>register.php"><li class="item-footer">Registrarse</li></a>
 	    		    <a href="<?php echo APP_URL; ?>login.php"><li class="item-footer">Login</li></a>
-	    		    <a href="<?php echo APP_URL; ?>contacto.php"><li class="item-footer">Contacto</li></a>
-	    		    <a href="<?php echo APP_URL; ?>suscribirse.php"><li class="item-footer">Suscribirse</li></a>
+	    		    <a href="#"><li class="item-footer">Contacto</li></a>
+	    		    <a href="#"><li class="item-footer">Suscribirse</li></a>
 	    		</ul>
 	    		<!-- fin . listas-footer -->
 	    	</div>
