@@ -1,7 +1,9 @@
 <?php
 namespace App\Modelos;
 
-class DB {
+use App\Modelos\Producto;
+
+abstract class DB {
 
 	static private $dsn= 'mysql:host=200.68.105.36;dbname=uv025077_proyectox';
 	static private $user = 'uv025077_proyX';
@@ -21,4 +23,28 @@ class DB {
 
   		}
 	}
+	 /**
+     * @param
+     * @return array [$this, $response];
+     */
+    public static function guardarProducto(Producto $producto) {
+    	try {
+    	$sql = 'INSERT INTO productos (nombre, marca, descripcion, categoria, precio, foto, stock, destacado) VALUES (:nombre, :marca, :descripcion, :categoria, :precio, :foto, :stock, :destacado)';
+    	$pdo = self::conectar();
+    	$stmt = $pdo->prepare($sql);
+    	$stmt->bindValue(':nombre', $producto->getNombre(), \PDO::PARAM_STR);
+    	$stmt->bindValue(':marca', $producto->getMarca(), \PDO::PARAM_STR);
+    	$stmt->bindValue(':descripcion', $producto->getDescripcion(), \PDO::PARAM_STR);
+    	$stmt->bindValue(':categoria', json_encode($producto->getCategoria()), \PDO::PARAM_STR);
+    	$stmt->bindValue(':precio', $producto->getPrecio(), \PDO::PARAM_INT);
+    	$stmt->bindValue(':foto', $producto->getFoto(), \PDO::PARAM_STR);
+        $stmt->bindValue(':stock', $producto->getStock(), \PDO::PARAM_STR);
+    	$stmt->bindValue(':destacado', $producto->getDestacado(), \PDO::PARAM_INT);
+    	$stmt->execute();
+    	$resp = "Se guardó el producto con éxito";
+	    } catch(\	PDOException $exception) {
+	    	$resp = "Se produjo un error: {$exception->getMessage()}";
+	    }
+	    return  $pdo->lastInsertId();
+    }
 }
