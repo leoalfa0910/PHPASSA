@@ -2,6 +2,7 @@
 namespace App\Modelos;
 
 use App\Modelos\Producto;
+use App\Modelos\DB;
 
 abstract class DB {
 
@@ -46,5 +47,20 @@ abstract class DB {
 	    	$resp = "Se produjo un error: {$exception->getMessage()}";
 	    }
 	    return  $pdo->lastInsertId();
+    }
+
+    /**
+     * @param params
+     * @return returns?
+     */
+    public static function traerPorEmail($email)
+    {
+    	$sql = 'SELECT * FROM usuarios WHERE email = :email';
+    	$stmt = self::conectar()->prepare($sql);
+    	$stmt->execute([
+    		':email' => $email
+    	]);
+    	$results = $stmt->fetch(\PDO::FETCH_ASSOC);
+    	return $results;
     }
 }
