@@ -50,15 +50,16 @@ class Validator {
 		
 		$errores = [];
 
-		$info['nombre']=trim( $info['nombre'] );
-		$info['apellido']=trim( $info['apellido'] );
-		$info['email']=trim( $info['email'] );
+		$info['nombre'] = trim( $info['nombre'] );
+		$info['apellido'] = trim( $info['apellido'] );
+		$info['email'] = trim( $info['email'] );
 
 		if ( empty( $info['nombre'] ) ){
 			$errores['nombre'] = 'Ingrese su nombre aquí';
 		} else if ( strlen( $info['nombre'] ) < 4 ){
 			$errores['nombre'] = 'El nombre es demasiado corto';
 		}
+
 
 		if ( empty( $info['apellido'] ) ){
 			$errores['apellido'] = 'Ingrese su apellido aquí';

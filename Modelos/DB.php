@@ -80,7 +80,7 @@ abstract class DB {
         $stmt->bindValue(':cp', $usuario->getCp(), \PDO::PARAM_STR);
         $stmt->bindValue(':telefono', $usuario->getTelefono(), \PDO::PARAM_STR);
         $stmt->bindValue(':dni', $usuario->getDni(), \PDO::PARAM_STR);
-        $stmt->bindValue(':avatar', $usuario->getAvatar(), \PDO::PARAM_STR);
+        $stmt->bindValue(':avatar', $usuario->getFoto(), \PDO::PARAM_STR);
 				$stmt->bindValue(':contrasenia', $usuario->getContrasenia(), \PDO::PARAM_STR);
 
 				$stmt->execute();

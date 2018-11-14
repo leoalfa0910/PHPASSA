@@ -22,12 +22,12 @@ include('paises.php');
 
           <div class="row">
             <div class="col-12 nombre form-group">
-              <label for="nombreCompleto">Nombre:</label>
-              <input class="form-control" id="nombre"  type="text" name="nombre" value="<?php echo $_POST['nombre'] ?? '' ?>">
+              <label for="nombre">Nombre:</label>
+              <input class="form-control" id="nombre"  type="text" name="nombre" value="<?php echo $_SESION['post']['nombre'] ?? '' ?>" required>
               <span class="error"><?php
-		          if (isset($_SESSION['nombre'])) { 
-		            echo $_SESSION['nombre'];
-		            unset($_SESSION['nombre']);
+		          if (isset($_SESSION['errores']['nombre'])) { 
+		            echo $_SESSION['errores']['nombre'];
+		            unset($_SESSION['errores']['nombre']);
 		          } 
               ?></span>
             </div>
@@ -35,12 +35,12 @@ include('paises.php');
 
           <div class="row">
             <div class="col-12 nombre form-group">
-              <label for="nombreCompleto">Apellido:</label>
-              <input class="form-control" id="apellido"  type="text" name="apellido" value="<?php echo $_POST['apellido'] ?? '' ?>">
+              <label for="apellido">Apellido:</label>
+              <input class="form-control" id="apellido"  type="text" name="apellido" value="<?php echo $_SESION['post']['apellido'] ?? '' ?>" required>
               <span class="error"><?php
-		          if (isset($_SESSION['apellido'])) { 
-		            echo $_SESSION['apellido'];
-		            unset($_SESSION['apellido']);
+		          if (isset($_SESSION['errores']['apellido'])) { 
+		            echo $_SESSION['errores']['apellido'];
+		            unset($_SESSION['errores']['apellido']);
 		          } 
               ?></span>
             </div>
@@ -63,7 +63,7 @@ include('paises.php');
               <select class="form-control" name="nacionalidad" required>
                 <option selected="true" disabled="disabled">Seleccione su país de nacimiento:</option>
                 <?php for($i = 0; $i < count($paises); $i++) { ?>
-                <option value="<?= $i ?>"><?php echo $paises[$i]; ?></option>
+                <option value="<?= $paises[$i] ?>"><?= $paises[$i] ?></option>
                 <?php } ?>
               </select>
             </div>
@@ -74,11 +74,11 @@ include('paises.php');
           <div class="row correo">
             <div class="col-12 form-group">
               <label for="email">Correo Electrónico:</label>
-              <input class="form-control" id="email" type="text" name="email" value="<?php echo $_POST['email'] ?? '' ?>">
+              <input class="form-control" id="email" type="text" name="email" value="<?php echo $_SESION['post']['email'] ?? '' ?>" required>
               <span class="error"><?php
-		          if (isset($_SESSION['email'])) { 
-		            echo $_SESSION['email'];
-		            unset($_SESSION['email']);
+		          if (isset($_SESSION['errores']['email'])) { 
+		            echo $_SESSION['errores']['email'];
+		            unset($_SESSION['errores']['email']);
 		          } 
               ?></span>
             </div>
@@ -89,7 +89,7 @@ include('paises.php');
           <!-- <div class="row">
             <div class="col-12 form-group">
               <label for="nombreDeUsuario">Nombre de Usuario:</label>
-              <input class="form-control" id="nombreDeUsuario" type="text" name="nombreDeUsuario" value="<?php //echo $_POST['nombreDeUsuario'] ?? '' ?>" placeholder="">
+              <input class="form-control" id="nombreDeUsuario" type="text" name="nombreDeUsuario" value="<?php //echo $_SESION['post']['nombreDeUsuario'] ?? '' ?>" placeholder="">
               <span class="error"><?php
 		          // if (isset($_SESSION['usuario'])) { 
 		          //   echo $_SESSION['usuario'];
@@ -107,9 +107,9 @@ include('paises.php');
               <label for="imagenDePerfil">Imagen de Perfil:</label><br>
               <input class="" type="file" name="foto" value="">
               <span class="error"><?php
-		          if (isset($_SESSION['foto'])) { 
-		            echo $_SESSION['foto'];
-		            unset($_SESSION['foto']);
+		          if (isset($_SESSION['errores']['foto'])) { 
+		            echo $_SESSION['errores']['foto'];
+		            unset($_SESSION['errores']['foto']);
 		          } 
               ?></span>
             </div>
@@ -120,11 +120,11 @@ include('paises.php');
           <div class="row">
             <div class="col-12 form-group">
               <label for="pass">Contraseña:</label>
-              <input class="form-control" id="contrasenia" type="password" name="contrasenia" value="" placeholder="">
+              <input class="form-control" id="contrasenia" type="password" name="contrasenia" value="" placeholder="" required>
               <span class="error"><?php
-		          if (isset($_SESSION['contrasenia'])) { 
-		            echo $_SESSION['contrasenia'];
-		            unset($_SESSION['contrasenia']);
+		          if (isset($_SESSION['errores']['contrasenia'])) { 
+		            echo $_SESSION['errores']['contrasenia'];
+		            unset($_SESSION['errores']['contrasenia']);
 		          } 
               ?></span>
             </div>
@@ -135,11 +135,11 @@ include('paises.php');
           <div class="row">
             <div class="col-12 form-group">
               <label for="passDeNuevo">Repita su contraseña:</label>
-              <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="" placeholder="">
+              <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="" placeholder="" required>
               <span class="error"><?php
-		          if (isset($_SESSION['passDeNuevo'])) { 
-		            echo $_SESSION['passDeNuevo'];
-		            unset($_SESSION['passDeNuevo']);
+		          if (isset($_SESSION['errores']['passDeNuevo'])) { 
+		            echo $_SESSION['errores']['passDeNuevo'];
+		            unset($_SESSION['errores']['passDeNuevo']);
 		          } 
               ?></span>
             </div>
@@ -151,7 +151,7 @@ include('paises.php');
             <div class="col-12 botones">
               <button class="btn btn-primary" type="submit" name="button">¡Registrame!</button>
               &nbsp
-              <button class="btn btn-primary" type="reset" name="button">Cancelar</button>
+              <button class="btn btn-primary" type="reset">Cancelar</button>
             </div>
           </div>
 

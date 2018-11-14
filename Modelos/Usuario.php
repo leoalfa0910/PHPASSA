@@ -26,18 +26,17 @@ class Usuario {
 	* Constructor
 	*/
 
-	public function __construct($email, $contrasenia, $nombre, $apellido, $sexo, $nacionalidad, $nacimiento, $direccion, $cp, $telefono = NULL, $dni = NULL, $foto = NULL){
+	public function __construct($email, $contrasenia, $nombre, $apellido, $sexo = NULL, $nacionalidad = NULL, $nacimiento = NULL, $direccion = NULL, $cp = NULL, $telefono = NULL, $dni = NULL, $foto = NULL){
 		$this->email = $email;
 		$this->contrasenia = $contrasenia;
 		$this->nombre = $nombre;
 		$this->apellido = $apellido;
 		$this->sexo = $sexo;
 		$this->telefono = $telefono;
-		$this->foto = $foto;
-		$this->foto = $foto;
-		$this->foto = $foto;
-		$this->foto = $foto;
-		$this->foto = $foto;
+		$this->nacionalidad = $nacionalidad;
+		$this->telefono = $telefono;
+		$this->direccion = $direccion;
+		$this->cp = $cp;
 		$this->dni = $dni;
 		$this->foto = $foto;
 	}
