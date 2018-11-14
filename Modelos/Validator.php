@@ -33,10 +33,10 @@ class Validator {
 		if (empty ($info['email'])){
 		    $errores['email'] = true;
 		} else if (filter_var($info['email'], FILTER_VALIDATE_EMAIL)===false){
-		$errores['email'] = true;
+			$errores['email'] = true;
 		}
 		if (empty ($info['contra'])){
-		$errores['contra'] = true;
+			$errores['contra'] = true;
 		}
 		return $errores;
 	 
@@ -48,71 +48,56 @@ class Validator {
 	public function validarInformacionRegistro($info)
 	{
 		
+		$errores = [];
 
-		$errorNombre = '';
-		$errorApellido = '';
-		$errorCorreo = '';
-		$errorImagenDePerfil = '';
-		$errorUsuario = '';
-		$errorPass = '';
-		$errorPassDeNuevo = '';
+		$info['nombre']=trim( $info['nombre'] );
+		$info['apellido']=trim( $info['apellido'] );
+		$info['correoElectronico']=trim( $info['correoElectronico'] );
+		$info['nombreDeUsuario']=trim( $info['nombreDeUsuario'] );
 
-		$_POST['nombre']=trim( $_POST['nombre'] );
-		$_POST['apellido']=trim( $_POST['apellido'] );
-		$_POST['correoElectronico']=trim( $_POST['correoElectronico'] );
-		$_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
-
-		  if ( $_POST['pass'] !== $_POST['passDeNuevo']) {
-		    $errorPassDeNuevo = 'La contraseña no coincide';
-		  }
-
-		  if ( empty( $_POST['nombre'] ) ){
-		      $errorNombre = 'Ingrese su nombre aquí';
-		    } else if ( strlen( $_POST['nombre'] ) < 4 ){
-		      $errorNombre = 'El nombre es demasiado corto';
-		    }
-
-		    if ( empty( $_POST['apellido'] ) ){
-		        $errorApellido = 'Ingrese su apellido aquí';
-		      } else if ( strlen( $_POST['apellido'] ) < 4 ){
-		        $errorApellido = 'El apellido es demasiado corto';
-		      }
-
-		  if ( empty($_POST['correoElectronico']) ){
-		      $errorCorreo = 'Debe ingresar el Correo';
-		    }else if (filter_var( $_POST['correoElectronico'] , FILTER_VALIDATE_EMAIL )===false) {
-		      $errorCorreo = 'El Correo es inválido';
-		    }
-
-		    if ( empty($_POST['nombreDeUsuario']) ){
-		        $errorUsuario = 'Debe ingresar nombre de usuario';
-		    } elseif (strlen($_POST['nombreDeUsuario']) < 5 )  {
-		        $errorUsuario = 'El nombre debe poseer al menos 5 caracteres';
-		    }
-
-		    if ( empty($_POST['pass']) ){
-		        $errorPass = 'Debe ingresar una contraseña';
-		    }
-
-		    if (strlen($_POST['pass']) > 0 && strlen($_POST['pass']) < 8 ) {
-		        $errorPass= 'La contraseña ingresada es demasiado corta';
-		    }
-
-		    if ($_POST['pass'] !== $_POST['passDeNuevo']){
-		      $errorPassDeNuevo = 'La contraseña no coincide';
-		    }
-
-		    if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK) {
-		        $ext = pathinfo($_FILES['imagenDePerfil']['name'], PATHINFO_EXTENSION);
-		        if ( $ext == 'jpg' ||  $ext == 'jpeg' || $ext == 'png' ){
-		          $nombreDeImagen = $_POST['nombreDeUsuario'] . '.' . $ext;
-		        move_uploaded_file($_FILES['imagenDePerfil']['tmp_name'], 'img/usuarios' . $nombreDeImagen);
-		        } else {
-		          $errorImagenDePerfil = 'El Formato es inválido';
-		        }
-
-		    
-
+		if ( $info['pass'] !== $info['passDeNuevo']) {
+			$errores['PassDeNuevo'] = 'La contraseña no coincide';
 		}
+
+		if ( empty( $info['nombre'] ) ){
+			$errores['nombre'] = 'Ingrese su nombre aquí';
+		} else if ( strlen( $info['nombre'] ) < 4 ){
+			$errores['nombre'] = 'El nombre es demasiado corto';
+		}
+
+		if ( empty( $info['apellido'] ) ){
+			$errores['apellido'] = 'Ingrese su apellido aquí';
+		} else if ( strlen( $info['apellido'] ) < 4 ){
+			$errores['apellido'] = 'El apellido es demasiado corto';
+		}
+
+		if ( empty($info['correoElectronico']) ) {
+			$errores['email'] = 'Debe ingresar el Correo';
+		} else if (filter_var( $info['correoElectronico'] , FILTER_VALIDATE_EMAIL )===false) {
+			$errores['email'] = 'El Correo es inválido';
+		}
+
+		if ( empty($info['contrasenia']) ){
+			$errores['contrasenia'] = 'Debe ingresar una contraseña';
+		}
+
+		if (strlen($info['contrasenia']) > 0 && strlen($info['contrasenia']) < 8 ) {
+			$errores['contrasenia']= 'La contraseña ingresada es demasiado corta';
+		}
+
+		if ($info['contrasenia'] !== $info['passDeNuevo']){
+			$errores['passDeNuevo'] = 'La contraseña no coincide';
+		}
+
+		if ($_FILES['foto']['error'] == UPLOAD_ERR_OK) {
+			$ext = pathinfo($_FILES['foto']['name'], PATHINFO_EXTENSION);
+			if ( $ext == 'jpg' ||  $ext == 'jpeg' || $ext == 'png' ){
+				$nombreDeImagen = $info['nombreDeUsuario'] . '.' . $ext;
+				move_uploaded_file($_FILES['foto']['tmp_name'], APP_URL . 'img/usuarios/' . $nombreDeImagen);
+			} else {
+				$errores['foto'] = 'El Formato es inválido';
+			}
+		}
+		return $errores;
 	}
 }

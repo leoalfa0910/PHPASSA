@@ -1,16 +1,22 @@
 <?php
+use App\Modelos\DB;
 
-require_once 'app.php';
+/* DB */
 include 'Modelos/DB.php';
-$pdo = App\Modelos\DB::conectar();
+$pdo = DB::conectar();
+require_once 'app.php';
+/* 	Variables globales  */
+include 'db-productos.php'; // $productos
+include 'db-usuarios.php'; // $usuarios
+include 'db-destacados.php'; // $destacados
 include 'Traits/SubirImagen.php';
 include 'Modelos/Auth.php';
 $auth = new App\Modelos\Auth;
+
+/* 		Modelos 	 */
 include 'Modelos/Validator.php';
 include 'Modelos/Producto.php';
 include 'Modelos/Usuario.php';
-include 'db-productos.php';
-include 'db-usuarios.php';
-include 'db-destacados.php';
+
 
 

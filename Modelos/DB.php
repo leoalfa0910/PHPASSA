@@ -2,6 +2,7 @@
 namespace App\Modelos;
 
 use App\Modelos\Producto;
+use App\Modelos\Usuario;
 use App\Modelos\DB;
 
 
@@ -64,24 +65,29 @@ abstract class DB {
     	return $results;
     }
 
-		public function guardarUsuario() {
+		public static function guardarUsuario(Usuario $usuario) {
 			try {
 				$pdo = DB::conectar();
-				$sql = 'INSERT INTO usuarios (nombre, apellido, sexo, pais, correoElectronico, nombreDeUsuario, pass) VALUES (:nombre, :apellido, :sexo, :pais, :correoElectronico, :nombreDeUsuario, :pass)';
+				$sql = 'INSERT INTO usuarios (nombre, apellido, email, sexo, nacionalidad, nacimiento, direccion, cp, telefono, dni, avatar, contrasenia ) VALUES (:nombre, :apellido, :email, :sexo, :nacionalidad, :nacimiento, :direccion, :cp, :telefono, :dni, :avatar, :contrasenia)';
 				$stmt = $pdo->prepare($sql);
-				$stmt->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
-				$stmt->bindValue(':apellido', $this->apellido, \PDO::PARAM_STR);
-				$stmt->bindValue(':sexo', $this->sexo, \PDO::PARAM_STR);
-				$stmt->bindValue(':pais', $this->pais, \PDO::PARAM_STR);
-				$stmt->bindValue(':correoElectronico', $this->correoElectronico, \PDO::PARAM_STR);
-				$stmt->bindValue(':nombreDeUsuario', $this->nombreDeUsuario, \PDO::PARAM_STR);
-				$stmt->bindValue(':pass', $this->pass, \PDO::PARAM_STR);
+				$stmt->bindValue(':nombre', $usuario->getNombre(), \PDO::PARAM_STR);
+				$stmt->bindValue(':apellido', $usuario->getApellido(), \PDO::PARAM_STR);
+				$stmt->bindValue(':email', $usuario->getEmail(), \PDO::PARAM_STR);
+        $stmt->bindValue(':sexo', $usuario->getSexo(), \PDO::PARAM_STR);
+        $stmt->bindValue(':nacionalidad', $usuario->getNacionalidad(), \PDO::PARAM_STR);
+        $stmt->bindValue(':nacimiento', $usuario->getNacimiento(), \PDO::PARAM_STR);
+        $stmt->bindValue(':direccion', $usuario->getDireccion(), \PDO::PARAM_STR);
+        $stmt->bindValue(':cp', $usuario->getCp(), \PDO::PARAM_STR);
+        $stmt->bindValue(':telefono', $usuario->getTelefono(), \PDO::PARAM_STR);
+        $stmt->bindValue(':dni', $usuario->getDni(), \PDO::PARAM_STR);
+        $stmt->bindValue(':avatar', $usuario->getAvatar(), \PDO::PARAM_STR);
+				$stmt->bindValue(':contrasenia', $usuario->getContrasenia(), \PDO::PARAM_STR);
 				$stmt->execute();
 				$resp = "Usuario registrado con exito";
 			} catch(\	PDOException $exception) {
 			  	$resp = "Se produjo un error: {$exception->getMessage()}";
 			}
-			return [$this, $resp, $pdo->lastInsertId()];
+			return $pdo->lastInsertId();
 		}
 
 }

@@ -15,7 +15,7 @@ class Usuario {
   private $cp;
   private $telefono;
   private $dni;
-  private $avatar;
+  private $foto;
   private $contrasenia;
 
 
@@ -26,11 +26,20 @@ class Usuario {
 	* Constructor
 	*/
 
-	public function __construct($nombre, $apellido, $email, $contrasenia){
-		$this->nombre = $nombre;
-		$this->apellido = $apellido;
+	public function __construct($email, $contrasenia, $nombre, $apellido, $sexo, $nacionalidad, $nacimiento, $direccion, $cp, $telefono, $dni, $foto){
 		$this->email = $email;
 		$this->contrasenia = $contrasenia;
+		$this->nombre = $nombre;
+		$this->apellido = $apellido;
+		$this->sexo = $sexo;
+		$this->telefono = $telefono;
+		$this->foto = $foto;
+		$this->foto = $foto;
+		$this->foto = $foto;
+		$this->foto = $foto;
+		$this->foto = $foto;
+		$this->dni = $dni;
+		$this->foto = $foto;
 	}
 
 	public function getNombre()
@@ -153,14 +162,14 @@ class Usuario {
 	  return $this;
 	}
 
-	public function getAvatar()
+	public function getFoto()
 	{
-	  return $this->avatar;
+	  return $this->foto;
 	}
 
-	public function setAvatar($avatar)
+	public function setFoto($foto)
 	{
-	  $this->avatar = $avatar;
+	  $this->foto = $foto;
 
 	  return $this;
 	}
