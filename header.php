@@ -37,7 +37,7 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="profile.php?id=1">Profile</a>
 		      </li>
-		      <?php 
+		      <?php
 		      if ( ! isset($_SESSION['logueado'])) { ?>
 		      <li class="nav-item">
 		        <a class="nav-link" href="login.php">Login</a>
