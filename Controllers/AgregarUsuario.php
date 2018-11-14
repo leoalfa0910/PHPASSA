@@ -10,10 +10,10 @@ if ($_POST) {
 	/**
 	 * Las Variables
 	 */
-	$nombre = $_POST['nombre'];
-	$apellido = $_POST['apellido'];
-	$email = $_POST['email'];
-	$contrasenia = $_POST['contrasenia']; $_SESSION['error_nombre'] = 'asdasdad';
+	$nombre = $_POST['nombre'] ?? '';
+	$apellido = $_POST['apellido'] ?? '';
+	$email = $_POST['email'] ?? '';
+	$contrasenia = $_POST['contrasenia'] ?? '';
 
 	/**
 	 * Instancio el usuario sin la foto ya que la pongo después cuando llamo al metodo del trait que sube la foto y me devuelve la ruta para guardarla en la DB...
@@ -26,12 +26,11 @@ if ($_POST) {
 	 * @return success: [Usuario $usuario, $error], error: string PDOException->getMessage()
 	 */
 
-	$resp = $usuario->guardarUsuario();
+	$resp = DB::guardarUsuario($usuario); /* retorna array [objeto $this, string $respuesta, int $id] */
 
 	/**
 	 * Nos vamos a la página del usuario nuevo
 	 */
-	$pdo = DB::conectar();
-	$id = $resp[2];
-	exit(header("Location: /profile.php?id={$id}"));
+
+	exit(header("Location: /profile.php?id={$email}"));
 }

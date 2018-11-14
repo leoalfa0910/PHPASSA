@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace App\Modelos;
 
 use App\Traits\SubirImagen;
@@ -12,7 +12,7 @@ class Producto {
 	private $categoria;
 	private $precio;
 	private $foto;
-    private $stock;
+  private $stock;
 	private $destacado;
 
 	use SubirImagen;
@@ -189,7 +189,7 @@ class Producto {
         $this->stock = $stock;
 
         return $this;
-    } 
+    }
 
     /**
      * @return mixed
@@ -211,5 +211,5 @@ class Producto {
         return $this;
     }
 
-   
+
 }

@@ -6,7 +6,8 @@ include('header.php');
 include('paises.php');
 
 
-$errorNombreCompleto = '';
+$errorNombre = '';
+$errorApellido = '';
 $errorCorreo = '';
 $errorImagenDePerfil = '';
 $errorUsuario = '';
@@ -16,7 +17,8 @@ $errorPassDeNuevo = '';
 if ( $_POST ){
   // var_dump($_POST);
 
-$_POST['nombreCompleto']=trim( $_POST['nombreCompleto'] );
+$_POST['nombre']=trim( $_POST['nombre'] );
+$_POST['apellido']=trim( $_POST['apellido'] );
 $_POST['correoElectronico']=trim( $_POST['correoElectronico'] );
 $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
 
@@ -24,11 +26,17 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
     $errorPassDeNuevo = 'La contraseña no coincide';
   }
 
-  if ( empty( $_POST['nombreCompleto'] ) ){
-      $errorNombreCompleto = 'Ingrese su nombre aquí';
-    } else if ( strlen( $_POST['nombreCompleto'] ) < 4 ){
-      $errorNombreCompleto = 'El nombre es demasiado corto';
+  if ( empty( $_POST['nombre'] ) ){
+      $errorNombre = 'Ingrese su nombre aquí';
+    } else if ( strlen( $_POST['nombre'] ) < 4 ){
+      $errorNombre = 'El nombre es demasiado corto';
     }
+
+    if ( empty( $_POST['apellido'] ) ){
+        $errorApellido = 'Ingrese su apellido aquí';
+      } else if ( strlen( $_POST['apellido'] ) < 4 ){
+        $errorApellido = 'El apellido es demasiado corto';
+      }
 
   if ( empty($_POST['correoElectronico']) ){
       $errorCorreo = 'Debe ingresar el Correo';
@@ -83,9 +91,17 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
 
           <div class="row">
             <div class="col-12 nombre form-group">
-              <label for="nombreCompleto">Nombre y Apellido:</label>
-              <input class="form-control" id="nombreCompleto"  type="text" name="nombreCompleto" value="<?php echo $_POST['nombreCompleto'] ?? '' ?>">
-              <span class="error"><?php echo $errorNombreCompleto ?></span>
+              <label for="nombreCompleto">Nombre:</label>
+              <input class="form-control" id="nombre"  type="text" name="nombre" value="<?php echo $_POST['nombre'] ?? '' ?>">
+              <span class="error"><?php echo $errorNombre ?></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 nombre form-group">
+              <label for="nombreCompleto">Apellido:</label>
+              <input class="form-control" id="apellido"  type="text" name="apellido" value="<?php echo $_POST['apellido'] ?? '' ?>">
+              <span class="error"><?php echo $errorApellido ?></span>
             </div>
           </div>
 
