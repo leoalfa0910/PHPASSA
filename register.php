@@ -23,7 +23,7 @@ include('paises.php');
           <div class="row">
             <div class="col-12 nombre form-group">
               <label for="nombre">Nombre:</label>
-              <input class="form-control" id="nombre"  type="text" name="nombre" value="<?php echo $_SESION['post']['nombre'] ?? '' ?>" required>
+              <input class="form-control" id="nombre"  type="text" name="nombre" value="<?php echo $_SESION['post']['nombre'] ?? '' ?>">
               <span class="error"><?php
 		          if (isset($_SESSION['errores']['nombre'])) { 
 		            echo $_SESSION['errores']['nombre'];
@@ -36,7 +36,7 @@ include('paises.php');
           <div class="row">
             <div class="col-12 nombre form-group">
               <label for="apellido">Apellido:</label>
-              <input class="form-control" id="apellido"  type="text" name="apellido" value="<?php echo $_SESION['post']['apellido'] ?? '' ?>" required>
+              <input class="form-control" id="apellido"  type="text" name="apellido" value="<?php echo $_SESION['post']['apellido'] ?? '' ?>">
               <span class="error"><?php
 		          if (isset($_SESSION['errores']['apellido'])) { 
 		            echo $_SESSION['errores']['apellido'];
@@ -60,7 +60,7 @@ include('paises.php');
 
           <div class="row">
             <div class="col-12 form-group">
-              <select class="form-control" name="nacionalidad" required>
+              <select class="form-control" name="nacionalidad">
                 <option selected="true" disabled="disabled">Seleccione su país de nacimiento:</option>
                 <?php for($i = 0; $i < count($paises); $i++) { ?>
                 <option value="<?= $paises[$i] ?>"><?= $paises[$i] ?></option>
@@ -74,7 +74,7 @@ include('paises.php');
           <div class="row correo">
             <div class="col-12 form-group">
               <label for="email">Correo Electrónico:</label>
-              <input class="form-control" id="email" type="text" name="email" value="<?php echo $_SESION['post']['email'] ?? '' ?>" required>
+              <input class="form-control" id="email" type="text" name="email" value="<?php echo $_SESION['post']['email'] ?? '' ?>">
               <span class="error"><?php
 		          if (isset($_SESSION['errores']['email'])) { 
 		            echo $_SESSION['errores']['email'];
@@ -120,7 +120,7 @@ include('paises.php');
           <div class="row">
             <div class="col-12 form-group">
               <label for="pass">Contraseña:</label>
-              <input class="form-control" id="contrasenia" type="password" name="contrasenia" value="" placeholder="" required>
+              <input class="form-control" id="contrasenia" type="password" name="contrasenia" value="" placeholder="">
               <span class="error"><?php
 		          if (isset($_SESSION['errores']['contrasenia'])) { 
 		            echo $_SESSION['errores']['contrasenia'];
@@ -135,7 +135,7 @@ include('paises.php');
           <div class="row">
             <div class="col-12 form-group">
               <label for="passDeNuevo">Repita su contraseña:</label>
-              <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="" placeholder="" required>
+              <input class="form-control" id="passDeNuevo" type="password" name="passDeNuevo" value="" placeholder="">
               <span class="error"><?php
 		          if (isset($_SESSION['errores']['passDeNuevo'])) { 
 		            echo $_SESSION['errores']['passDeNuevo'];

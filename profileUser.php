@@ -18,7 +18,7 @@ foreach($usuarios as $usuario) {
 	    <div class="card">
 			  <div class="card-header">
 			  	<div class="row">
-				  	<div class="col-md-4 img-container"><img src="img/usuarios/user.png"  width="200"></div>
+				  	<div class="col-md-4 img-container"><img src="<?= $single->avatar ?? 'img/usuarios/user.png' ?>"  width="200"></div>
 				  	<div class="col-md-8"><p class="titulo"><span class="nombre"><?php echo $single->nombre; ?></span><span class="separador"> | </span><span class="profile">Profile</span></p>
 				  	</div>
 				 </div>
