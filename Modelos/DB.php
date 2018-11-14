@@ -82,6 +82,7 @@ abstract class DB {
         $stmt->bindValue(':dni', $usuario->getDni(), \PDO::PARAM_STR);
         $stmt->bindValue(':avatar', $usuario->getAvatar(), \PDO::PARAM_STR);
 				$stmt->bindValue(':contrasenia', $usuario->getContrasenia(), \PDO::PARAM_STR);
+
 				$stmt->execute();
 				$resp = "Usuario registrado con exito";
 			} catch(\	PDOException $exception) {
