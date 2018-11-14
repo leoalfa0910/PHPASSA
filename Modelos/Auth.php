@@ -2,7 +2,6 @@
 namespace App\Modelos;
 use App\Usuarios\Clases\DB;
 class Auth {
-
  	/**
  	 * @param 
  	 * @return 
@@ -30,7 +29,6 @@ class Auth {
  	{
  		return isset($_SESSION['logueado']);
  	}
-
  	/**
  	 * @param params
  	 * @return returns?
@@ -52,8 +50,6 @@ class Auth {
  	{
  		setcookie('logueado', $email, time() + 3600 * 24 * 365);
  	}
-
-
  	/**
  	 * @param params
  	 * @return returns?
@@ -63,5 +59,4 @@ class Auth {
  		setcookie('logueado', '', time() - 1);
  		session_destroy();
  	}
-
  }
