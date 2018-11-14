@@ -2,6 +2,7 @@
 namespace App\Modelos;
 
 use App\Modelos\Producto;
+use App\Modelos\Usuario;
 use App\Modelos\DB;
 
 
@@ -64,18 +65,17 @@ abstract class DB {
     	return $results;
     }
 
-		public function guardarUsuario() {
+		public function guardarUsuario(Usuario $usuario) {
 			try {
 				$pdo = DB::conectar();
-				$sql = 'INSERT INTO usuarios (nombre, apellido, sexo, pais, correoElectronico, nombreDeUsuario, pass) VALUES (:nombre, :apellido, :sexo, :pais, :correoElectronico, :nombreDeUsuario, :pass)';
+				$sql = 'INSERT INTO usuarios (nombre, apellido, sexo, pais, correoElectronico, pass) VALUES (:nombre, :apellido, :sexo, :pais, :correoElectronico, :pass)';
 				$stmt = $pdo->prepare($sql);
-				$stmt->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
-				$stmt->bindValue(':apellido', $this->apellido, \PDO::PARAM_STR);
-				$stmt->bindValue(':sexo', $this->sexo, \PDO::PARAM_STR);
-				$stmt->bindValue(':pais', $this->pais, \PDO::PARAM_STR);
-				$stmt->bindValue(':correoElectronico', $this->correoElectronico, \PDO::PARAM_STR);
-				$stmt->bindValue(':nombreDeUsuario', $this->nombreDeUsuario, \PDO::PARAM_STR);
-				$stmt->bindValue(':pass', $this->pass, \PDO::PARAM_STR);
+				$stmt->bindValue(':nombre', $usuario->getNombre(), \PDO::PARAM_STR);
+				$stmt->bindValue(':apellido', $usuario->getApellido(), \PDO::PARAM_STR);
+				$stmt->bindValue(':sexo', $usuario->getSexo(), \PDO::PARAM_STR);
+				$stmt->bindValue(':pais', $usuario->getNacionalidad(), \PDO::PARAM_STR);
+				$stmt->bindValue(':correoElectronico', $usuario->getEmail(), \PDO::PARAM_STR);
+				$stmt->bindValue(':pass', $usuario->getContrasenia(), \PDO::PARAM_STR);
 				$stmt->execute();
 				$resp = "Usuario registrado con exito";
 			} catch(\	PDOException $exception) {

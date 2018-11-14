@@ -140,14 +140,6 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
 
           <br>
 
-          <div class="row">
-            <div class="col-12 form-group">
-              <label for="nombreDeUsuario">Nombre de Usuario:</label>
-              <input class="form-control" id="nombreDeUsuario" type="text" name="nombreDeUsuario" value="<?php echo $_POST['nombreDeUsuario'] ?? '' ?>" placeholder="">
-              <span class="error"><?php echo $errorUsuario ?></span>
-            </div>
-          </div>
-
           <br>
 
           <div class="row">
