@@ -1,6 +1,7 @@
-<?php 
+<?php
 namespace App\Traits;
 use App\Modelos\Producto;
+use App\Modelos\Usuario;
 
 trait SubirImagen {
 	public function subirImagen($modelo) {

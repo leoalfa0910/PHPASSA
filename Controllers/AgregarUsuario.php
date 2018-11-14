@@ -15,13 +15,12 @@ if ($_POST) {
 	$sexo = $_POST['sexo'];
 	$pais = $_POST['pais'];
 	$correoElectronico = $_POST['correoElectronico'] ?? '';
-	$nombreDeUsuario = $_POST['nombreDeUsuario'];
 	$pass = $_POST['pass'] ?? '';
 
 	/**
 	 * Instancio el usuario sin la foto ya que la pongo después cuando llamo al metodo del trait que sube la foto y me devuelve la ruta para guardarla en la DB...
 	 */
-	$usuario = new Usuario($nombre, $apellido, $sexo, $pais, $correoElectronico, $nombreDeUsuario, $pass);
+	$usuario = new Usuario($nombre, $apellido, $sexo, $pais, $correoElectronico, $pass);
 
 	/**
 	 * Subo la foto y con lo que me devuelve la seteo.
