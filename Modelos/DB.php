@@ -67,12 +67,15 @@ abstract class DB {
 		public function guardarUsuario() {
 			try {
 				$pdo = DB::conectar();
-				$sql = 'INSERT INTO usuarios (nombre, apellido, email, contrasenia) VALUES (:nombre, :apellido, :email, :contrasenia)';
+				$sql = 'INSERT INTO usuarios (nombre, apellido, sexo, pais, correoElectronico, nombreDeUsuario, pass) VALUES (:nombre, :apellido, :sexo, :pais, :correoElectronico, :nombreDeUsuario, :pass)';
 				$stmt = $pdo->prepare($sql);
 				$stmt->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
 				$stmt->bindValue(':apellido', $this->apellido, \PDO::PARAM_STR);
-				$stmt->bindValue(':email', $this->email, \PDO::PARAM_STR);
-				$stmt->bindValue(':contrasenia', $this->contrasenia, \PDO::PARAM_STR);
+				$stmt->bindValue(':sexo', $this->sexo, \PDO::PARAM_STR);
+				$stmt->bindValue(':pais', $this->pais, \PDO::PARAM_STR);
+				$stmt->bindValue(':correoElectronico', $this->correoElectronico, \PDO::PARAM_STR);
+				$stmt->bindValue(':nombreDeUsuario', $this->nombreDeUsuario, \PDO::PARAM_STR);
+				$stmt->bindValue(':pass', $this->pass, \PDO::PARAM_STR);
 				$stmt->execute();
 				$resp = "Usuario registrado con exito";
 			} catch(\	PDOException $exception) {

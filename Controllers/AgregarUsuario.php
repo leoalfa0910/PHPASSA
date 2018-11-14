@@ -12,14 +12,23 @@ if ($_POST) {
 	 */
 	$nombre = $_POST['nombre'] ?? '';
 	$apellido = $_POST['apellido'] ?? '';
-	$email = $_POST['email'] ?? '';
-	$contrasenia = $_POST['contrasenia'] ?? '';
+	$sexo = $_POST['sexo'];
+	$pais = $_POST['pais'];
+	$correoElectronico = $_POST['correoElectronico'] ?? '';
+	$nombreDeUsuario = $_POST['nombreDeUsuario'];
+	$pass = $_POST['pass'] ?? '';
 
 	/**
 	 * Instancio el usuario sin la foto ya que la pongo después cuando llamo al metodo del trait que sube la foto y me devuelve la ruta para guardarla en la DB...
 	 */
-	$usuario = new Usuario($nombre, $apellido, $email, $contrasenia);
+	$usuario = new Usuario($nombre, $apellido, $sexo, $pais, $correoElectronico, $nombreDeUsuario, $pass);
 
+	/**
+	 * Subo la foto y con lo que me devuelve la seteo.
+	 */
+	$rutaImagen = $usuario->subirImagen($usuario);
+
+	if (isset($_FILES['imagenDePerfil'])) $producto->setFoto($rutaImagen);
 
 	/**
 	 * Guardamos
