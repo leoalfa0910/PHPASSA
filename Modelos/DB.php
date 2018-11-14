@@ -68,13 +68,14 @@ abstract class DB {
 		public function guardarUsuario(Usuario $usuario) {
 			try {
 				$pdo = DB::conectar();
-				$sql = 'INSERT INTO usuarios (nombre, apellido, sexo, pais, correoElectronico, pass) VALUES (:nombre, :apellido, :sexo, :pais, :correoElectronico, :pass)';
+				$sql = 'INSERT INTO usuarios (nombre, apellido, sexo, pais, correoElectronico, foto, pass) VALUES (:nombre, :apellido, :sexo, :pais, :correoElectronico, :foto, :pass)';
 				$stmt = $pdo->prepare($sql);
 				$stmt->bindValue(':nombre', $usuario->getNombre(), \PDO::PARAM_STR);
 				$stmt->bindValue(':apellido', $usuario->getApellido(), \PDO::PARAM_STR);
 				$stmt->bindValue(':sexo', $usuario->getSexo(), \PDO::PARAM_STR);
 				$stmt->bindValue(':pais', $usuario->getNacionalidad(), \PDO::PARAM_STR);
 				$stmt->bindValue(':correoElectronico', $usuario->getEmail(), \PDO::PARAM_STR);
+				$stmt->bindValue(':foto', $usuario->getAvatar(), \PDO::PARAM_STR);
 				$stmt->bindValue(':pass', $usuario->getContrasenia(), \PDO::PARAM_STR);
 				$stmt->execute();
 				$resp = "Usuario registrado con exito";
