@@ -32,5 +32,6 @@ if ($_POST) {
 	 * Nos vamos a la página del usuario nuevo
 	 */
 
-	exit(header("Location: /profile.php?id={$email}"));
+	$id = $resp;
+	exit(header("Location: /profile.php?id={$id}"));
 }
