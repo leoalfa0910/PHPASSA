@@ -82,7 +82,7 @@ $_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
     <div class="container">
 
 
-        <form class="" method="post" enctype="multipart/form-data">
+        <form class="" method="post" action="Controllers/AgregarUsuario.php" enctype="multipart/form-data">
 
           <h2>Formulario de Registro:</h2>
 
