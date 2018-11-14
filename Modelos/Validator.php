@@ -52,12 +52,7 @@ class Validator {
 
 		$info['nombre']=trim( $info['nombre'] );
 		$info['apellido']=trim( $info['apellido'] );
-		$info['correoElectronico']=trim( $info['correoElectronico'] );
-		$info['nombreDeUsuario']=trim( $info['nombreDeUsuario'] );
-
-		if ( $info['pass'] !== $info['passDeNuevo']) {
-			$errores['PassDeNuevo'] = 'La contraseña no coincide';
-		}
+		$info['email']=trim( $info['email'] );
 
 		if ( empty( $info['nombre'] ) ){
 			$errores['nombre'] = 'Ingrese su nombre aquí';
@@ -71,9 +66,9 @@ class Validator {
 			$errores['apellido'] = 'El apellido es demasiado corto';
 		}
 
-		if ( empty($info['correoElectronico']) ) {
+		if ( empty($info['email']) ) {
 			$errores['email'] = 'Debe ingresar el Correo';
-		} else if (filter_var( $info['correoElectronico'] , FILTER_VALIDATE_EMAIL )===false) {
+		} else if (filter_var( $info['email'] , FILTER_VALIDATE_EMAIL )===false) {
 			$errores['email'] = 'El Correo es inválido';
 		}
 
@@ -87,16 +82,6 @@ class Validator {
 
 		if ($info['contrasenia'] !== $info['passDeNuevo']){
 			$errores['passDeNuevo'] = 'La contraseña no coincide';
-		}
-
-		if ($_FILES['foto']['error'] == UPLOAD_ERR_OK) {
-			$ext = pathinfo($_FILES['foto']['name'], PATHINFO_EXTENSION);
-			if ( $ext == 'jpg' ||  $ext == 'jpeg' || $ext == 'png' ){
-				$nombreDeImagen = $info['nombreDeUsuario'] . '.' . $ext;
-				move_uploaded_file($_FILES['foto']['tmp_name'], APP_URL . 'img/usuarios/' . $nombreDeImagen);
-			} else {
-				$errores['foto'] = 'El Formato es inválido';
-			}
 		}
 		return $errores;
 	}

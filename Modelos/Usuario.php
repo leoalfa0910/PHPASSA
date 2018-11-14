@@ -26,7 +26,7 @@ class Usuario {
 	* Constructor
 	*/
 
-	public function __construct($email, $contrasenia, $nombre, $apellido, $sexo, $nacionalidad, $nacimiento, $direccion, $cp, $telefono, $dni, $foto){
+	public function __construct($email, $contrasenia, $nombre, $apellido, $sexo, $nacionalidad, $nacimiento, $direccion, $cp, $telefono = NULL, $dni = NULL, $foto = NULL){
 		$this->email = $email;
 		$this->contrasenia = $contrasenia;
 		$this->nombre = $nombre;

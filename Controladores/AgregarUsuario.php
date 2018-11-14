@@ -6,6 +6,7 @@ use App\Modelos\Usuario;
 use App\Modelos\DB;
 use App\Modelos\Validator;
 
+var_dump($_POST); die;
 $validator = new Validator;
 
 $errores = $validator->validarInformacionRegistro($_POST);
@@ -16,11 +17,11 @@ if ($_POST && ! count($errores)) {
 	 */
 	$nombre = $_POST['nombre'] ?? NULL;
 	$apellido = $_POST['apellido'] ?? NULL;
+	$dni = $_POST['dni'] ?? NULL;
 	$sexo = $_POST['sexo'] ?? NULL;
-	$pais = $_POST['pais'] ?? NULL;
+	$pais = $_POST['nacionalidad'] ?? NULL;
 	$email = $_POST['email'];
-	$nombreDeUsuario = $_POST['nombreDeUsuario'];
-	$pass = $_POST['pass'] ?? NULL;
+	$pass = $_POST['contrasenia'] ?? NULL;
 
 	/**
 	 * Instancio el usuario sin la foto ya que la pongo después cuando llamo al metodo del trait que sube la foto y me devuelve la ruta para guardarla en la DB...

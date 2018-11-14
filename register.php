@@ -62,8 +62,8 @@ include('paises.php');
             <div class="col-12 form-group">
               <select class="form-control" name="nacionalidad" required>
                 <option selected="true" disabled="disabled">Seleccione su país de nacimiento:</option>
-                <?php foreach ($paises as $pais) { ?>
-                <option value=""><?php echo $pais; ?></option>
+                <?php for($i = 0; $i < count($paises); $i++) { ?>
+                <option value="<?= $i ?>"><?php echo $paises[$i]; ?></option>
                 <?php } ?>
               </select>
             </div>
@@ -86,7 +86,6 @@ include('paises.php');
 
           <br>
 
-<<<<<<< HEAD
           <!-- <div class="row">
             <div class="col-12 form-group">
               <label for="nombreDeUsuario">Nombre de Usuario:</label>
@@ -101,9 +100,7 @@ include('paises.php');
           </div> -->
 
           <!-- <br> -->
-=======
           <br>
->>>>>>> a1d1c52866cb6833c8ff5002bb01ea7a224b079d
 
           <div class="row">
             <div class="col-12">
