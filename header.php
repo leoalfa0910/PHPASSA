@@ -23,19 +23,10 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mx-auto">
 		      <li class="nav-item">
-		        <a class="nav-link" href="<?php echo APP_URL; ?>">Home <span class="sr-only">(current)</span></a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="cargar_producto.php">Crear producto</a>
-		      </li>
-		      <li class="nav-item">
 		        <a class="nav-link" href="productos.php">Productos</a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="faq.php">FAQ</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="profileUser.php?id=1">Profile</a>
 		      </li>
 		      <?php
 		      if ( ! isset($_SESSION['logueado'])) { ?>
@@ -47,6 +38,12 @@
 		      </li>
 		  		<?php } else {
 		       ?>
+					<li class="nav-item">
+ 		        <a class="nav-link" href="profileUser.php?id=1">Profile</a>
+ 		      </li>
+					<li class="nav-item">
+		        <a class="nav-link" href="cargar_producto.php">Crear producto</a>
+		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="logout.php">Logout</a>
 		      </li>

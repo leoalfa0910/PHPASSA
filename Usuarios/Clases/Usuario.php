@@ -176,25 +176,4 @@ class Usuario {
 
 	  return $this;
 	}
-
-	/**
-	* @param
-	* @return array [$this, $response];
-	*/
-	public function guardarUsuario() {
-		try {
-			$pdo = DB::conectar();
-			$sql = 'INSERT INTO usuarios (nombre, apellido, email, contrasenia) VALUES (:nombre, :apellido, :email, :contrasenia)';
-			$stmt = $pdo->prepare($sql);
-			$stmt->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
-			$stmt->bindValue(':apellido', $this->apellido, \PDO::PARAM_STR);
-			$stmt->bindValue(':email', $this->email, \PDO::PARAM_STR);
-			$stmt->bindValue(':contrasenia', $this->contrasenia, \PDO::PARAM_STR);
-			$stmt->execute();
-			$resp = "Usuario registrado con exito";
-		} catch(\	PDOException $exception) {
-		  	$resp = "Se produjo un error: {$exception->getMessage()}";
-		}
-		return [$this, $resp, $pdo->lastInsertId()];
-	}
 }
