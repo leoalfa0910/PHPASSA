@@ -1,79 +1,10 @@
-  <?php
+<?php
 
 /* aquí irá el header */
 include('header.php');
 
 include('paises.php');
 
-
-$errorNombre = '';
-$errorApellido = '';
-$errorCorreo = '';
-$errorImagenDePerfil = '';
-$errorUsuario = '';
-$errorPass = '';
-$errorPassDeNuevo = '';
-
-if ( $_POST ){
-  // var_dump($_POST);
-
-$_POST['nombre']=trim( $_POST['nombre'] );
-$_POST['apellido']=trim( $_POST['apellido'] );
-$_POST['correoElectronico']=trim( $_POST['correoElectronico'] );
-$_POST['nombreDeUsuario']=trim( $_POST['nombreDeUsuario'] );
-
-  if ( $_POST['pass'] !== $_POST['passDeNuevo']) {
-    $errorPassDeNuevo = 'La contraseña no coincide';
-  }
-
-  if ( empty( $_POST['nombre'] ) ){
-      $errorNombre = 'Ingrese su nombre aquí';
-    } else if ( strlen( $_POST['nombre'] ) < 4 ){
-      $errorNombre = 'El nombre es demasiado corto';
-    }
-
-    if ( empty( $_POST['apellido'] ) ){
-        $errorApellido = 'Ingrese su apellido aquí';
-      } else if ( strlen( $_POST['apellido'] ) < 4 ){
-        $errorApellido = 'El apellido es demasiado corto';
-      }
-
-  if ( empty($_POST['correoElectronico']) ){
-      $errorCorreo = 'Debe ingresar el Correo';
-    }else if (filter_var( $_POST['correoElectronico'] , FILTER_VALIDATE_EMAIL )===false) {
-      $errorCorreo = 'El Correo es inválido';
-    }
-
-    if ( empty($_POST['nombreDeUsuario']) ){
-        $errorUsuario = 'Debe ingresar nombre de usuario';
-    } elseif (strlen($_POST['nombreDeUsuario']) < 5 )  {
-        $errorUsuario = 'El nombre debe poseer al menos 5 caracteres';
-    }
-
-    if ( empty($_POST['pass']) ){
-        $errorPass = 'Debe ingresar una contraseña';
-    }
-
-    if (strlen($_POST['pass']) > 0 && strlen($_POST['pass']) < 8 ) {
-        $errorPass= 'La contraseña ingresada es demasiado corta';
-    }
-
-    if ($_POST['pass'] !== $_POST['passDeNuevo']){
-      $errorPassDeNuevo = 'La contraseña no coincide';
-    }
-
-    if ($_FILES['imagenDePerfil']['error'] == UPLOAD_ERR_OK) {
-        $ext = pathinfo($_FILES['imagenDePerfil']['name'], PATHINFO_EXTENSION);
-        if ( $ext == 'jpg' ||  $ext == 'jpeg' || $ext == 'png' ){
-          $nombreDeImagen = $_POST['nombreDeUsuario'] . '.' . $ext;
-        move_uploaded_file($_FILES['imagenDePerfil']['tmp_name'], 'img/usuarios' . $nombreDeImagen);
-        } else {
-          $errorImagenDePerfil = 'El Formato es inválido';
-        }
-
-    }
-
-}
 
  ?>
 

@@ -1,7 +1,7 @@
 <?php 
 use App\Modelos\Validator;
 use App\Modelos\Auth;
-include_once 'autoload.php'; 
+include_once '../autoload.php'; 
 
 if ($_POST){
 $validator = new Validator;

@@ -9,7 +9,7 @@ include 'header.php';
         <div class= "row justify-content-center">
 
             <div class= "contenedorUno col-12 col-sm-12 col-md-4 col-lg-4 ">
-              <form action="validarLogin.php" method="post" enctype="multipart/form-data">
+              <form action="Controllers/validarLogin.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
 
                   <br><br>
