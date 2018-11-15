@@ -1,5 +1,6 @@
 <?php
 namespace App\Modelos;
+use App\Modelos\DB;
 class Validator {
 	/**
 	 * @param login info y pdo obj
@@ -61,6 +62,7 @@ class Validator {
 		}
 
 
+
 		if ( empty( $info['apellido'] ) ){
 			$errores['apellido'] = 'Ingrese su apellido aquí';
 		} else if ( strlen( $info['apellido'] ) < 4 ){
@@ -71,6 +73,8 @@ class Validator {
 			$errores['email'] = 'Debe ingresar el Correo';
 		} else if (filter_var( $info['email'] , FILTER_VALIDATE_EMAIL )===false) {
 			$errores['email'] = 'El Correo es inválido';
+		} elseif ( DB::traerPorEmail( $info['email'] ) ) {
+			$errores['email'] = 'El email ya existe';
 		}
 
 		if ( empty($info['contrasenia']) ){

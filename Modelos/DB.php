@@ -61,8 +61,8 @@ abstract class DB {
     	$stmt->execute([
     		':email' => $email
     	]);
-    	$results = $stmt->fetch(\PDO::FETCH_ASSOC);
-    	return $results;
+    	$usuario = $stmt->fetch(\PDO::FETCH_ASSOC);
+    	return $usuario ? $usuario : false;
     }
 
 		public static function guardarUsuario(Usuario $usuario) {
