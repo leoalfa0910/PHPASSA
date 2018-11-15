@@ -1,4 +1,4 @@
-<?php include_once 'autoload.php'; 
+<?php include_once 'autoload.php';
 use App\Modelos\DB;
 if (isset($_SESSION['logueado'])) {
 	$user = DB::traerPorEmail($_SESSION['logueado']);
@@ -11,7 +11,7 @@ if (isset($_SESSION['logueado'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200" rel="stylesheet">
-	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/4.4.7/css/ionicons.min.css">
 	<meta charset="UTF-8">
 	<title>PROYECTO X - Insumos</title>
 
@@ -22,7 +22,7 @@ if (isset($_SESSION['logueado'])) {
 	    <!-- . nav -->
 	    <nav class="navbar navbar-expand-lg">
 	    	<div class="container">
-	    	<a class="navbar-brand" href="<?php echo APP_URL; ?>"><img src="img/logo.png"></a>
+	    	<a id="logo" class="navbar-brand" href="<?php echo APP_URL; ?>"><img src="img/logo.png"></a>
   			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    	<span class="navbar-toggler-icon"></span>
 		  	</button>
@@ -53,6 +53,9 @@ if (isset($_SESSION['logueado'])) {
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="logout.php">Logout</a>
+		      </li>
+					<li class="nav-item">
+		        <a id="img-carrito" class="navbar-brand"><img src="img/shopping-cart.png"></a>
 		      </li>
 		  		<?php } ?>
 		    </ul>
