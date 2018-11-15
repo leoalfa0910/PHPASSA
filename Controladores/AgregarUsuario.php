@@ -51,7 +51,7 @@ if ($_POST && ! count($errores)) {
 	/**
 	 * Nos vamos a la página del usuario nuevo
 	 */
-
+	$auth->loguear($email);
 	exit(header("Location: /profileUser.php?id={$id}"));
 } else {
 	$_SESSION['errores'] = $errores;	

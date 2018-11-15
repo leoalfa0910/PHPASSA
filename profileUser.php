@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+if ( ! isset($_SESSION['logueado']))  exit(header('Location: ' . APP_URL . 'login.php'));
 
 foreach($usuarios as $usuario) {
 	if ($usuario->id == $_GET['id'] + 0){
@@ -7,6 +8,7 @@ foreach($usuarios as $usuario) {
 		break;
 	}
 }
+
 ?>
 
 <!-- . profile -->

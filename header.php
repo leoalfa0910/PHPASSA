@@ -1,4 +1,10 @@
-<?php include_once 'autoload.php'; ?>
+<?php include_once 'autoload.php'; 
+use App\Modelos\DB;
+if (isset($_SESSION['logueado'])) {
+	$user = DB::traerPorEmail($_SESSION['logueado']);
+	$id = $user['id'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +14,7 @@
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<meta charset="UTF-8">
 	<title>PROYECTO X - Insumos</title>
+
 </head>
 <body>
 	<!-- . cabeza -->
@@ -39,7 +46,7 @@
 		  		<?php } else {
 		       ?>
 					<li class="nav-item">
- 		        <a class="nav-link" href="profileUser.php?id=1">Profile</a>
+ 		        <a class="nav-link" href="profileUser.php?id=<?= $id ?>">Profile</a>
  		      </li>
 					<li class="nav-item">
 		        <a class="nav-link" href="cargar_producto.php">Crear producto</a>
