@@ -54,10 +54,10 @@ if (isset($_SESSION['logueado'])) {
 		      <li class="nav-item">
 		        <a class="nav-link" href="logout.php">Logout</a>
 		      </li>
+		  		<?php } ?>
 					<li class="nav-item">
 		        <a id="img-carrito" class="navbar-brand"><img src="img/shopping-cart.png"></a>
 		      </li>
-		  		<?php } ?>
 		    </ul>
 		  </div>
 		  </div>
