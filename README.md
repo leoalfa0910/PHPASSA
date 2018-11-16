@@ -1,10 +1,10 @@
 # Proyecto X
 
 ## Sprint 1
-Front estátio. 
+Front estático. 
 Entregado.
 Devolución: 
-Buen uso de git.
+- Buen uso de git.
 - El proyecto tiene muy linda estetica y buen uso del diseño.
 - Para la pagina de FAQs falta contenido real y mucho mas diseño.
 - Se ve el contenido estatico bien realizado.
@@ -15,6 +15,7 @@ Buen uso de git.
 
 ## Sprint 2
 UML y DER
+Entregado.
 
 ## Sprint 3
 Login y Registro: Profes, se pueden loguear con el email profes@digitalhouse.com y la contraseña 11111111
