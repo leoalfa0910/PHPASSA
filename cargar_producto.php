@@ -14,7 +14,7 @@ $marcas=['logitech', 'redragon', 'wd', 'kingston', 'gigabyte', 'radeon', 'aeroco
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-6">
-				<form method="POST" action="Controllers/AgregarProducto.php" enctype="multipart/form-data" id="form">
+				<form method="POST" action="Controladores/AgregarProducto.php" enctype="multipart/form-data" id="form">
 					<div class="form-group mt-4">
 						<label for="nombre">Nombre</label>
 						<input class="form-control" type="text" name="nombre" id="nombre" autofocus>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace App\Modelos;
 
 use App\Traits\SubirImagen;
@@ -12,7 +12,7 @@ class Producto {
 	private $categoria;
 	private $precio;
 	private $foto;
-    private $stock;
+  private $stock;
 	private $destacado;
 
 	use SubirImagen;
@@ -192,27 +192,24 @@ class Producto {
     }
 
     /**
-     * @param
-     * @return array [$this, $response];
+     * @return mixed
      */
-    public function guardarProducto() {
-    	try {
-    	$pdo = DB::conectar();
-    	$sql = 'INSERT INTO productos (nombre, marca, descripcion, categoria, precio, foto, stock, destacado) VALUES (:nombre, :marca, :descripcion, :categoria, :precio, :foto, :stock, :destacado)';
-    	$stmt = $pdo->prepare($sql);
-    	$stmt->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
-    	$stmt->bindValue(':marca', $this->marca, \PDO::PARAM_STR);
-    	$stmt->bindValue(':descripcion', $this->descripcion, \PDO::PARAM_STR);
-    	$stmt->bindValue(':categoria', json_encode($this->categoria), \PDO::PARAM_STR);
-    	$stmt->bindValue(':precio', $this->precio, \PDO::PARAM_INT);
-    	$stmt->bindValue(':foto', $this->foto, \PDO::PARAM_STR);
-        $stmt->bindValue(':stock', $this->stock, \PDO::PARAM_STR);
-    	$stmt->bindValue(':destacado', $this->destacado, \PDO::PARAM_INT);
-    	$stmt->execute();
-    	$resp = "Se guardó el producto con éxito";
-	    } catch(\	PDOException $exception) {
-	    	$resp = "Se produjo un error: {$exception->getMessage()}";
-	    }
-	    return [$this, $resp, $pdo->lastInsertId()];
+    public function getDestacado()
+    {
+        return $this->destacado;
     }
+
+    /**
+     * @param mixed $destacado
+     *
+     * @return self
+     */
+    public function setDestacado($destacado)
+    {
+        $this->destacado = $destacado;
+
+        return $this;
+    }
+
+
 }

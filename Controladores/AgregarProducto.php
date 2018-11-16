@@ -1,6 +1,4 @@
 <?php 
-namespace App\Controllers;
-
 include_once '../autoload.php';
 use App\Modelos\Producto;
 use App\Modelos\DB;
@@ -34,11 +32,11 @@ if ($_POST) {
 	 * @return success: [Producto $producto, $error], error: string PDOException->getMessage()
 	 */
 
-	$resp = $producto->guardarProducto(); /* retorna array [objeto $this, string $respuesta, int $id] */
+	$resp = DB::guardarProducto($producto); /* retorna array [objeto $this, string $respuesta, int $id] */
 
 	/**
 	 * Nos vamos a la página del producto nuevo
 	 */
-	$id = $resp[2];
+	$id = $resp;
 	exit(header("Location: /producto.php?id={$id}"));
 }

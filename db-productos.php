@@ -2,9 +2,9 @@
 include_once( 'autoload.php' );	
 use App\Modelos\DB;
 
-$conex = DB::conectar();
+// $conex = DB::conectar();
 
 $sql = 'SELECT * FROM productos';
-$results =$conex->query($sql);
+$results =$pdo->query($sql);
 $productos = $results->fetchAll(PDO::FETCH_OBJ);
 

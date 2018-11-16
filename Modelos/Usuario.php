@@ -15,7 +15,7 @@ class Usuario {
   private $cp;
   private $telefono;
   private $dni;
-  private $avatar;
+  private $foto;
   private $contrasenia;
 
 
@@ -26,11 +26,19 @@ class Usuario {
 	* Constructor
 	*/
 
-	public function __construct($nombre, $apellido, $email, $contrasenia){
-		$this->nombre = $nombre;
-		$this->apellido = $apellido;
+	public function __construct($email, $contrasenia, $nombre, $apellido, $sexo = NULL, $nacionalidad = NULL, $nacimiento = NULL, $direccion = NULL, $cp = NULL, $telefono = NULL, $dni = NULL, $foto = NULL){
 		$this->email = $email;
 		$this->contrasenia = $contrasenia;
+		$this->nombre = $nombre;
+		$this->apellido = $apellido;
+		$this->sexo = $sexo;
+		$this->telefono = $telefono;
+		$this->nacionalidad = $nacionalidad;
+		$this->telefono = $telefono;
+		$this->direccion = $direccion;
+		$this->cp = $cp;
+		$this->dni = $dni;
+		$this->foto = $foto;
 	}
 
 	public function getNombre()
@@ -153,14 +161,14 @@ class Usuario {
 	  return $this;
 	}
 
-	public function getAvatar()
+	public function getFoto()
 	{
-	  return $this->avatar;
+	  return $this->foto;
 	}
 
-	public function setAvatar($avatar)
+	public function setFoto($foto)
 	{
-	  $this->avatar = $avatar;
+	  $this->foto = $foto;
 
 	  return $this;
 	}
@@ -175,26 +183,5 @@ class Usuario {
 	  $this->contrasenia = $contrasenia;
 
 	  return $this;
-	}
-
-	/**
-	* @param
-	* @return array [$this, $response];
-	*/
-	public function guardarUsuario() {
-		try {
-			$pdo = DB::conectar();
-			$sql = 'INSERT INTO usuarios (nombre, apellido, email, contrasenia) VALUES (:nombre, :apellido, :email, :contrasenia)';
-			$stmt = $pdo->prepare($sql);
-			$stmt->bindValue(':nombre', $this->nombre, \PDO::PARAM_STR);
-			$stmt->bindValue(':apellido', $this->apellido, \PDO::PARAM_STR);
-			$stmt->bindValue(':email', $this->email, \PDO::PARAM_STR);
-			$stmt->bindValue(':contrasenia', $this->contrasenia, \PDO::PARAM_STR);
-			$stmt->execute();
-			$resp = "Usuario registrado con exito";
-		} catch(\	PDOException $exception) {
-		  	$resp = "Se produjo un error: {$exception->getMessage()}";
-		}
-		return [$this, $resp, $pdo->lastInsertId()];
 	}
 }

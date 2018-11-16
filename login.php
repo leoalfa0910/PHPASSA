@@ -1,6 +1,7 @@
 
+
 <?php include_once 'autoload.php'; ?>
-    <?php include 'header.php'; ?>
+    
 
     <?php
 
@@ -27,6 +28,12 @@
     }
     ?>
     <section id="login">
+
+<?php
+include 'header.php';
+?>
+	<section id="login">
+
       <div class="container">
         <div>
           <h2 class="text-center">Login</h2>
@@ -34,20 +41,27 @@
         <div class= "row justify-content-center">
 
             <div class= "contenedorUno col-12 col-sm-12 col-md-4 col-lg-4 ">
-              <form action="login.php" method="post" enctype="multipart/form-data">
+              <form action="Controladores/validarLogin.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
 
                   <br><br>
                   <label for="exampleInputEmail1">Usuario</label>
-                  <input type="email" name="emailUsuario" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="user@email.com">
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="user@email.com">
                   <small id="emailHelp" class="form-text text-muted"></small>
 
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Contraseña</label>
-                  <input type="password" name="contraseña" minlength="6" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    <?php if ($errorEmail == true || $errorContra == true )
-                    echo 'Email y/o contraseña incorrecta';
+                  <input type="password" name="contra" minlength="6" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <?php if (isset($_SESSION['error_email']) || isset($_SESSION['error_contra'])) {
+                    		echo '<div class="alert alert-danger">La contraseña debe tener al menos 6 caracteres y el email debe ser válido.</div>';
+                    		unset($_SESSION['error_email']);
+                    		unset($_SESSION['error_contra']);
+                  	}
+                  	if (isset($_SESSION['error_login'])) {
+                  		echo $_SESSION['error_login'];
+                  		unset($_SESSION['error_login']);
+                  	}
                     ?>
                   <br><br>
                   <button type="submit" class="btn btn-primary">Ingresá</button>
