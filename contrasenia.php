@@ -44,4 +44,4 @@ if(empty($_POST['emailContra'])){
   </div>
 </section>
 
-<?php include 'footer.php' ?>
+<?php include('footer.php') ?>

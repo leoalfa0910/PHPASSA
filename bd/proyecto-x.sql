@@ -6,7 +6,8 @@
 -- Tiempo de generación: 12-10-2018 a las 16:59:23
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
-
+create database `proyecto-x`;
+  use `proyecto-x`;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
