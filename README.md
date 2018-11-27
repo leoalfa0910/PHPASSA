@@ -18,7 +18,7 @@ UML y DER
 Entregado.
 
 ## Sprint 3
-Login y Registro: Profes, se pueden loguear con el email profes@digitalhouse.com y la contraseña 11111111
+Login y Registro:
 
 Devolución: 
 - Cuidado con los label (html).
