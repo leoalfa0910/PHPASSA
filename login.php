@@ -1,7 +1,39 @@
-<?php 
-include 'header.php';  
-?>  
+
+
+<?php include_once 'autoload.php'; ?>
+    
+
+    <?php
+
+    $errorEmail = false;
+    $errorContra = false;
+
+    if ($_POST){
+
+      if (empty ($_POST['emailUsuario'])){
+        $errorEmail = true;
+      } else if (filter_var($_POST['emailUsuario'], FILTER_VALIDATE_EMAIL)===false){
+        $errorEmail = true;
+      }
+
+      if (empty ($_POST['contraseña'])){
+        $errorContra = true;
+      }
+
+      if ($errorEmail == false && $errorContra == false){
+        Header ("location: " . APP_URL . "/index.php"); exit();
+
+      }
+      //var_dump($_POST);
+    }
+    ?>
+    <section id="login">
+
+<?php
+include 'header.php';
+?>
 	<section id="login">
+
       <div class="container">
         <div>
           <h2 class="text-center">Login</h2>

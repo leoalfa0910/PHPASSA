@@ -10,3 +10,12 @@ font-weight: bold;text-decoration: underline;
 .question{
   padding-bottom: 30px;
 }
+#faq {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
