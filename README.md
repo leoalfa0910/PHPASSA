@@ -1,11 +1,5 @@
 # Proyecto X
 
-## Primer Sprint 
-
-## Segundo Sprint 
-
-## Tercer Sprint 
-
 ## Sprint 1
 Front estático. 
 Entregado.
