@@ -27,8 +27,8 @@ Entregado.
 Login y Registro: Profes, se pueden loguear con el email profes@digitalhouse.com y la contraseña 11111111
 
 Devolución: 
--Cuidado con los label (html).
--En el login, pide usuario y estaria logueando con email.
--Cuando hay un usuario logueado, el footer no deberia permitir ir a login y registro.
--Validar en todas las paginas si esta bien ingresar en ese momento.
--Les doy feedback de usabilidad porque el desarrollo del login y registro esta perfecto.
+- Cuidado con los label (html).
+- En el login, pide usuario y estaria logueando con email.
+- Cuando hay un usuario logueado, el footer no deberia permitir ir a login y registro.
+- Validar en todas las paginas si esta bien ingresar en ese momento.
+- Les doy feedback de usabilidad porque el desarrollo del login y registro esta perfecto.
