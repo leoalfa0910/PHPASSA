@@ -8,7 +8,7 @@
 	    		<ul class="listas-footer">
 	    		    <a href="<?php echo APP_URL; ?>productos.php"><li class="item-footer">Productos</li></a>
 	    		    <a href="<?php echo APP_URL; ?>faq.php"><li class="item-footer">Faqs</li></a>
-	    		    <a href="<?php echo APP_URL; ?>profile.php?id=1"><li class="item-footer">Perfil</li></a>
+	    		    <a href="<?php echo APP_URL; ?>profileUser.php?id=1"><li class="item-footer">Perfil</li></a>
 	    		</ul>
 	    		<!-- fin . listas-footer -->
 	    	</div>

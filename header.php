@@ -11,7 +11,7 @@ if (isset($_SESSION['logueado'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200" rel="stylesheet">
-	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/4.4.7/css/ionicons.min.css">
+	<link href="https://unpkg.com/ionicons@4.4.7/dist/css/ionicons.min.css" rel="stylesheet">
 	<meta charset="UTF-8">
 	<title>PROYECTO X - Insumos</title>
 
@@ -45,17 +45,17 @@ if (isset($_SESSION['logueado'])) {
 		      </li>
 		  		<?php } else {
 		       ?>
-					<li class="nav-item">
- 		        <a class="nav-link" href="profileUser.php?id=<?= $id ?>">Profile</a>
+				<li class="nav-item">
+ 		      		<a class="nav-link" href="profileUser.php?id=<?= $id ?>">Profile</a>
  		      </li>
-					<li class="nav-item">
-		        <a class="nav-link" href="cargar_producto.php">Crear producto</a>
+				<li class="nav-item">
+		        	<a class="nav-link" href="cargar_producto.php">Crear producto</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="logout.php">Logout</a>
+		        	<a class="nav-link" href="logout.php">Logout</a>
 		      </li>
-					<li class="nav-item">
-		        <a id="img-carrito" class="navbar-brand"><img src="img/shopping-cart.png"></a>
+			  <li class="nav-item">
+		        	<a id="img-carrito" class="navbar-brand"><img src="img/shopping-cart.png"></a>
 		      </li>
 		  		<?php } ?>
 		    </ul>
