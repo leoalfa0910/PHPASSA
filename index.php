@@ -1,4 +1,6 @@
 <?php
+
+echo "lalalal";
 include('header.php');
  ?>
 
